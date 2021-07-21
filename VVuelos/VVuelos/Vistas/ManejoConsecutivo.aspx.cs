@@ -7,40 +7,115 @@ using System.Web.UI.WebControls;
 using BLL;
 using Konscious.Security.Cryptography;
 using System.Diagnostics;
+using System.Data;
 
 namespace VVuelos.Vistas
 {
     public partial class ManejoConsecutivo : System.Web.UI.Page
     {
         string mensaje_error;
+        string codigostr;
         int numero_error;
-        bool modo; //Si la pagina esta en modo insertar o editar
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            modo = false;
-            try
+            if (numeroConsecutivo.Text == String.Empty)
             {
-                if (!String.IsNullOrEmpty(Request.QueryString["codigo"].ToString()))//Confirmar si se esta pasando un codigo de consecutivo
+                if (Request.QueryString["codigo"].ToString() != "0")//Confirmar si se esta pasando un codigo de consecutivo
                 {
-
+                    Consecutivos consecutivo = new Consecutivos();
+                    DataSet datatest;
+                    datatest = consecutivo.cargar_consecutivo_id(ref mensaje_error, ref numero_error, int.Parse(Request.QueryString["codigo"].ToString()));
+                    codigostr = datatest.Tables[0].Rows[0][0].ToString();
+                    codigostr = datatest.Tables[0].Rows[0][1].ToString();
+                    codigostr = datatest.Tables[0].Rows[0][2].ToString();
+                    var item = descripcionConsecutivo.Items.FindByValue("1");
+                    descripcionConsecutivo.SelectedIndex = int.Parse(datatest.Tables[0].Rows[0][1].ToString()) - 1;
+                    descripcionConsecutivo.Enabled = false;
+                    numeroConsecutivo.Text = datatest.Tables[0].Rows[0][2].ToString();
+                    numeroConsecutivo.Enabled = false;
+                    prefijoConsecutivo.Text = datatest.Tables[0].Rows[0][3].ToString();
+                    rangoConsecutivoInicial.Text = datatest.Tables[0].Rows[0][4].ToString();
+                    rangoConsecutivoFinal.Text = datatest.Tables[0].Rows[0][5].ToString();
+                }
+                else
+                {
+                    //prefijochk.Checked = false;
+                    //rangochk.Checked = false;
+                    //rangoConsecutivoInicial.Enabled = false;
+                    //rangoConsecutivoFinal.Enabled = false;
+                    //prefijoConsecutivo.Enabled = false;
                 }
             }
-            catch
-            {
 
-            }
         }
 
-        protected void testButton_Click(object sender, EventArgs e)
+        protected void prefijochk_CheckedChanged(object sender, EventArgs e)
         {
-            Consecutivos consecutivos = new Consecutivos();
-            if (modo)
+            //if(prefijoConsecutivo.Enabled == false)
+            //{
+            //    prefijoConsecutivo.Enabled = true;
+            //}
+            //else
+            //{
+            //    prefijoConsecutivo.Enabled = false;
+            //}
+        }
+
+        protected void rangochk_CheckedChanged(object sender, EventArgs e)
+        {
+            //if (rangoConsecutivoInicial.Enabled == false)
+            //{
+            //    rangoConsecutivoInicial.Enabled = true;
+            //    rangoConsecutivoFinal.Enabled = true;
+            //}
+            //else
+            //{
+            //    rangoConsecutivoInicial.Enabled = false;
+            //    rangoConsecutivoFinal.Enabled = false;
+            //}
+        }
+
+        protected void cancelarConsecutivobtn_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ListaConsecutivos.aspx");
+        }
+
+        protected void aceptarConsecutivobtn_Click1(object sender, EventArgs e)
+        {
+            try
             {
-                consecutivos.insertar_consecutivo(ref mensaje_error, ref numero_error, 2, 2, "123", 1, 1);
-            } else
+                //Validacion de Datos
+                Consecutivos consecutivo = new Consecutivos();
+                DataSet datatest;
+                datatest = consecutivo.existe_tipo_consecutivo(ref mensaje_error, ref numero_error, int.Parse(descripcionConsecutivo.SelectedValue));
+                var teststr = rangoConsecutivoInicial.Text;
+                if (Request.QueryString["codigo"].ToString() != "0")
+                {
+                    consecutivo.editar_consecutivo(ref mensaje_error, ref numero_error, int.Parse(descripcionConsecutivo.SelectedValue), prefijoConsecutivo.Text, rangoConsecutivoInicial.Text, rangoConsecutivoFinal.Text);
+                    Response.Write("<script>alert('El consecutivo se ha cambiado de forma satisfactoria');</script>");
+                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Only alert Message');", true);
+                    Response.Redirect("ListaConsecutivos.aspx");
+                }
+                else
+                {
+                    if (datatest.Tables[0].Rows.Count == 0)
+                    {
+                        consecutivo.insertar_consecutivo(ref mensaje_error, ref numero_error, descripcionConsecutivo.SelectedValue, numeroConsecutivo.Text, prefijoConsecutivo.Text, rangoConsecutivoInicial.Text, rangoConsecutivoFinal.Text);
+                        Response.Write("<script>alert('El consecutivo se ha ingresado de forma satisfactoria');</script>");
+                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Only alert Message');", true);
+                        Response.Redirect("ListaConsecutivos.aspx");
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('El tipo de Consecutivo que quiere ingresar ya existe, por favor seleccione un valor diferente');</script>");
+                    }
+                }
+            }
+
+            catch
             {
-                consecutivos.insertar_consecutivo(ref mensaje_error, ref numero_error, 1, 1, "123", 1, 1);
+                Response.Write("<script>alert('Por favor revise los datos e intente de nuevo');</script>");
             }
         }
     }

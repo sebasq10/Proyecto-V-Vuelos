@@ -143,14 +143,14 @@
               <div class="form-group row mb-3">
                 <label for="descripcionConsecutivo" class="col-sm-2 col-form-label">Descripción:</label>
                 <div class="col-sm-3">
-                  <select id="descripcionConsecutivo" class="form-select">
-                    <option selected>Países</option>
-                    <option>Aerolíneas</option>
-                    <option>Puertas del Aeropuerto</option>
-                    <option>Compra de Boletos</option>
-                    <option>Reservaciones de Boletos</option>
-                    <option>Vuelos</option>
-                  </select>
+                    <asp:dropdownlist runat="server" id="descripcionConsecutivo" class="form-select"> 
+     <asp:listitem text="Países" value="1"></asp:listitem>
+     <asp:listitem text="Aerolíneas" value="2"></asp:listitem>
+     <asp:listitem text="Puertas del Aeropuerto" value="3"></asp:listitem>
+     <asp:listitem text="Compra de Boletos" value="4"></asp:listitem>
+     <asp:listitem text="Reservaciones de Boletos" value="5"></asp:listitem>
+                        <asp:listitem text="Vuelos" value="5"></asp:listitem>
+</asp:dropdownlist>
                 </div>
               </div>
               <div class="form-group row mb-3">
@@ -162,36 +162,38 @@
               <div class="form-group row mb-3">
                 <label for="prefijoConsecutivoCheck" class="col-sm-2 col-form-label">Posee Prefijo:</label>
                 <div class="col-sm-10">
-                  <input class="form-check-input" type="checkbox" value="" id="prefijoConsecutivoCheck">
+                    <asp:CheckBox ID="prefijochk" runat="server" Checked="false" OnCheckedChanged="prefijochk_CheckedChanged" />
                 </div>
               </div>
               <div class="form-group row mb-3">
                 <label for="prefijoConsecutivo" class="col-sm-2 col-form-label">Prefijo:</label>
                 <div class="col-sm-3">
-                  <input type="text" class="form-control" id="prefijoConsecutivo" placeholder="AA-">
+                    <asp:TextBox runat="server" type="text" class="form-control" id="prefijoConsecutivo" MaxLength="5"/>
                 </div>
               </div>
               <div class="form-group row mb-3">
                 <label for="rangoConsecutivoCheck" class="col-sm-2 col-form-label">Posee Rango:</label>
                 <div class="col-sm-10">
-                  <input class="form-check-input" type="checkbox" value="" id="rangoConsecutivoCheck">
+                  <asp:CheckBox ID="rangochk" runat="server" Checked="false" OnCheckedChanged="rangochk_CheckedChanged" />
                 </div>
               </div>
               <div class="form-group row mb-3">
                 <label for="rangoConsecutivoInicial" class="col-sm-2 col-form-label">Rango Inicial:</label>
                 <div class="col-sm-3">
-                  <input type="number" class="form-control" id="rangoConsecutivoInicial" placeholder="123">
+                  <asp:TextBox runat="server" type="number" class="form-control" id="rangoConsecutivoInicial" min="1"/>
                 </div>
               </div>
               <div class="form-group row mb-3">
                 <label for="rangoConsecutivoFinal" class="col-sm-2 col-form-label">Rango Final:</label>
                 <div class="col-sm-3">
-                  <input type="number" class="form-control" id="rangoConsecutivoFinal" placeholder="123">
+                  <asp:TextBox runat="server" type="number" class="form-control" id="rangoConsecutivoFinal" min="1"/>
                 </div>
               </div>
             </form>
-              <asp:Button id="testButton" runat="server" class="btn btn-success" Text="Aceptar" OnClick="testButton_Click"/>
-            <button type="button" class="btn btn-danger" id="cancelarConsecutivo" runat="server">Cancelar</button>
+
+
+              <asp:Button id="aceptarConsecutivobtn" runat="server" class="btn btn-success" Text="Aceptar"  OnClick="aceptarConsecutivobtn_Click1"/>
+              <asp:Button id="cancelarConsecutivobtn" runat="server" class="btn btn-danger" Text="Cancelar" OnClick="cancelarConsecutivobtn_Click"/>
           </div>
         </div>
       </div>

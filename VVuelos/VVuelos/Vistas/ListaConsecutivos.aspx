@@ -151,7 +151,7 @@
                     </Columns>
                 </asp:GridView>
             </div>
-            <asp:Button id="testButton" runat="server" class="btn btn-success" Text="Aceptar" OnClick="testButton_Click"/>
+            <asp:Button id="nuevoConsecutivobtn" runat="server" class="btn btn-success" Text="Nuevo Consecutivo" OnClick="nuevoConsecutivobtn_Click"/>
           </div>
         </div>
       </div>

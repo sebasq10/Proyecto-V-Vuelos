@@ -24,12 +24,12 @@ namespace VVuelos
         protected global::System.Web.UI.WebControls.GridView tabla_Consecutivos;
 
         /// <summary>
-        /// testButton control.
+        /// nuevoConsecutivobtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button testButton;
+        protected global::System.Web.UI.WebControls.Button nuevoConsecutivobtn;
     }
 }

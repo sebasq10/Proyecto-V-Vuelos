@@ -15,6 +15,15 @@ namespace VVuelos.Vistas
     {
 
         /// <summary>
+        /// descripcionConsecutivo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList descripcionConsecutivo;
+
+        /// <summary>
         /// numeroConsecutivo control.
         /// </summary>
         /// <remarks>
@@ -24,21 +33,66 @@ namespace VVuelos.Vistas
         protected global::System.Web.UI.WebControls.TextBox numeroConsecutivo;
 
         /// <summary>
-        /// testButton control.
+        /// prefijochk control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button testButton;
+        protected global::System.Web.UI.WebControls.CheckBox prefijochk;
 
         /// <summary>
-        /// cancelarConsecutivo control.
+        /// prefijoConsecutivo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton cancelarConsecutivo;
+        protected global::System.Web.UI.WebControls.TextBox prefijoConsecutivo;
+
+        /// <summary>
+        /// rangochk control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox rangochk;
+
+        /// <summary>
+        /// rangoConsecutivoInicial control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox rangoConsecutivoInicial;
+
+        /// <summary>
+        /// rangoConsecutivoFinal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox rangoConsecutivoFinal;
+
+        /// <summary>
+        /// aceptarConsecutivobtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button aceptarConsecutivobtn;
+
+        /// <summary>
+        /// cancelarConsecutivobtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button cancelarConsecutivobtn;
     }
 }

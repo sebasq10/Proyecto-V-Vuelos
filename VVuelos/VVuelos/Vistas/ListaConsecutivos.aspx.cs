@@ -25,7 +25,7 @@ namespace VVuelos
             Response.Redirect("ManejoConsecutivo.aspx?codigo="+ numero_codigo);
         }
 
-        protected void testButton_Click(object sender, EventArgs e)
+        protected void nuevoConsecutivobtn_Click(object sender, EventArgs e)
         {
             Response.Redirect("ManejoConsecutivo.aspx?codigo=0");
         }

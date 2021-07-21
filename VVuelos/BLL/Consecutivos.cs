@@ -94,8 +94,36 @@ namespace BLL
             }
         }
 
+        public DataSet cargar_consecutivo_id(ref string mensajeError, ref int numeroError, int codigo_consecutivo)
+        {
+            conexion = cls_DAL.trae_conexion("VVuelos", ref mensaje_error, ref numero_error);
+            if (conexion == null)
+            {
+                mensajeError = mensaje_error;
+                numeroError = numero_error;
+                return ds;
+            }
+            else
+            {
+                sql = "cargar_consecutivo_id";
 
-        public void insertar_consecutivo(ref string mensajeError, ref int numeroError, int descripcion, int consecutivo, string prefijo, int rango_inicial, int rango_final)
+                ParamStruct[] parametros = new ParamStruct[1];
+
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@ID_Consecutivo", SqlDbType.Int, codigo_consecutivo);
+
+                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
+                if (numero_error != 0)
+                {
+
+                    mensajeError = mensaje_error;
+                    numeroError = numero_error;
+                }
+                return ds;
+            }
+        }
+
+
+        public void insertar_consecutivo(ref string mensajeError, ref int numeroError, string descripcion, string consecutivo, string prefijo, string rango_inicial, string rango_final)
         {
             conexion = cls_DAL.trae_conexion("VVuelos", ref mensaje_error, ref numero_error);
             if (conexion == null)
@@ -108,16 +136,73 @@ namespace BLL
 
                 ParamStruct[] parametros = new ParamStruct[5];
 
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Descripcion", SqlDbType.Int, descripcion);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Consecutivo", SqlDbType.Int, consecutivo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Descripcion", SqlDbType.VarChar, descripcion);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Consecutivo", SqlDbType.VarChar, consecutivo);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Prefijo", SqlDbType.VarChar, prefijo);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Rango_Inicial", SqlDbType.Int, rango_inicial);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Rango_Final", SqlDbType.Int, rango_final);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Rango_Inicial", SqlDbType.VarChar, rango_inicial);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Rango_Final", SqlDbType.VarChar, rango_final);
 
                 ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
                 {
                     
+                    mensajeError = mensaje_error;
+                    numeroError = numero_error;
+                }
+            }
+        }
+
+        public DataSet existe_tipo_consecutivo(ref string mensajeError, ref int numeroError, int descripcion)
+        {
+            conexion = cls_DAL.trae_conexion("VVuelos", ref mensaje_error, ref numero_error);
+            if (conexion == null)
+            {
+                mensajeError = mensaje_error;
+                numeroError = numero_error;
+                return ds;
+            }
+            else
+            {
+                sql = "existe_tipo_consecutivo";
+
+                ParamStruct[] parametros = new ParamStruct[1];
+
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Descripcion", SqlDbType.Int, descripcion);
+
+                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
+                if (numero_error != 0)
+                {
+
+                    mensajeError = mensaje_error;
+                    numeroError = numero_error;
+                }
+                return ds;
+            }
+        }
+
+        public void editar_consecutivo(ref string mensajeError, ref int numeroError, int descripcion, string prefijo, string rango_inicial, string rango_final)
+        {
+            conexion = cls_DAL.trae_conexion("VVuelos", ref mensaje_error, ref numero_error);
+            if (conexion == null)
+            {
+                mensajeError = mensaje_error;
+                numeroError = numero_error;
+            }
+            else
+            {
+                sql = "editar_consecutivo";
+
+                ParamStruct[] parametros = new ParamStruct[4];
+
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Descripcion", SqlDbType.VarChar, descripcion);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Prefijo", SqlDbType.VarChar, prefijo);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Rango_Inicial", SqlDbType.VarChar, rango_inicial);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Rango_Final", SqlDbType.VarChar, rango_final);
+
+                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
+                if (numero_error != 0)
+                {
+
                     mensajeError = mensaje_error;
                     numeroError = numero_error;
                 }
