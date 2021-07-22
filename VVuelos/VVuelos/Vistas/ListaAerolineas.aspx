@@ -35,13 +35,12 @@
       <div class="row flex-nowrap">
         <div class="b-example-divider"></div>
         <div class="flex-shrink-0 p-4 bg-color-primario texto-sidebar-primario" style="width: 280px;">
-          <!--Aquí se cambia el color de background y color del texto (o se cambiaría el color de texto si sirviera. Por alguna razón, solo se cambia algunos textos entonces tuve que hacerlo manual. Marco donde en donde lo hago, Sebastián) -->
           <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
             <!--Aquí se cambia la imagen, probablemente solo usar link -->
             <!--<svg class="bi me-2" width="30" height="24"><use xlink:href=""></use></svg>-->
             <svg class="bi me-2" width="30" height="24">
               <use
-                xlink:href="https://media.discordapp.net/attachments/393184195729424384/850168225500364800/Avion.png?width=505&height=473">
+                <xlink:href="https://media.discordapp.net/attachments/393184195729424384/850168225500364800/Avion.png?width=505&height=473">
               </use>
             </svg>
             <span class="fs-5 fw-semibold text-white">V-Vuelos</span>
@@ -140,41 +139,26 @@
               <div class="row">
                 <div class="col-4">
                   <div class="table-responsive-lg col-md-11">
-                    <table class="table">
-                      <thead class="table-primario-dark">
-                        <tr>
-                          <th scope="col">Código</th>
-                          <th scope="col">Nombre</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">AE-1</th>
-                          <td>Delta</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">AE-2</th>
-                          <td>Copa</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">AE-3</th>
-                          <td>Spirit</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                      <asp:GridView ID="tabla_Aerolineas" class="table" AutoGenerateColumns="false" border="0" runat="server">
+                      <headerstyle Cssclass="table-primario-dark"/>
+                          <Columns>
+                              <asp:BoundField DataField="Cod_Aerolinea" HeaderText="Código" />
+                              <asp:BoundField DataField="Nombre" HeaderText="Nombre" />
+                          </Columns>
+                      </asp:GridView>
                   </div>
                 </div>
                 <div class="col-8">
                   <div class="form-group row mb-3">
                     <label for="numeroConsecutivo" class="col-sm-2 col-form-label">Código Aerolínea:</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="numeroConsecutivo" placeholder="" value="AE-1" readonly>
+                      <input type="text" class="form-control" id="" placeholder="" value="AE-1" readonly>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
                     <label for="numeroConsecutivo" class="col-sm-2 col-form-label">Nombre:</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="numeroConsecutivo" placeholder="" value="Delta">
+                      <input type="text" class="form-control" id="" placeholder="" value="Delta">
                     </div>
                   </div>
                   <div class="form-group row mb-3">
@@ -190,7 +174,6 @@
                       <button type="button" class="btn btn-danger">Borrar</button>
                     </div>
                   </div>
-                  </form>
                 </div>
               </div>
             </div>
