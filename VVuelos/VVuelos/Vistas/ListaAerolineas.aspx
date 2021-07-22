@@ -139,42 +139,32 @@
             <div class="container mb-4">
               <div class="row">
                 <div class="col-4">
-                  <div class="table-responsive-lg col-md-11">
-                    <table class="table">
-                      <thead class="table-primario-dark">
-                        <tr>
-                          <th scope="col">Código</th>
-                          <th scope="col">Nombre</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">AE-1</th>
-                          <td>Delta</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">AE-2</th>
-                          <td>Copa</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">AE-3</th>
-                          <td>Spirit</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <asp:GridView ID="tabla_Aerolineas" AutoGenerateColumns="false" class="table" border="0" runat="server">
+                  <headerstyle CssClass="table-primario-dark"/>
+                    <Columns>
+                        <asp:BoundField DataField="Cod_Aerolinea" HeaderText="Código de Aerolinea" />
+                        <asp:BoundField DataField="Nombre" HeaderText="Número" />
+                        <asp:BoundField DataField="Imagen" HeaderText="Imagen" />
+                     <asp:TemplateField>
+              <ItemTemplate>
+                 <asp:LinkButton ID="editar_Aerolinea" text="Seleccionar" type="button" class="btn btn-primary" runat="server" CommandArgument='<%# Eval("Cod_Aerolinea") %>' OnClick="editar_Aerolinea_Click"></asp:LinkButton>
+               </ItemTemplate>
+             </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
                   </div>
                 </div>
                 <div class="col-8">
                   <div class="form-group row mb-3">
                     <label for="numeroConsecutivo" class="col-sm-2 col-form-label">Código Aerolínea:</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="numeroConsecutivo" placeholder="" value="AE-1" readonly>
+                      <asp:TextBox runat="server" type="number" class="form-control" id="codigoAerolinea" enabled ="false"/>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
                     <label for="numeroConsecutivo" class="col-sm-2 col-form-label">Nombre:</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="numeroConsecutivo" placeholder="" value="Delta">
+                      <asp:TextBox runat="server" type="number" class="form-control" id="numeroPuerta"/>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
@@ -186,7 +176,7 @@
                   </div>
                   <div class="form-group row mb-3">
                     <div class="col-sm-4">
-                      <button type="button" class="btn btn-success">Aceptar</button>
+                      <button type="button" class="btn btn-success" runat="server" onserverclick="btnAceptar_Click" id="btnAceptar">Aceptar</button>
                       <button type="button" class="btn btn-danger">Borrar</button>
                     </div>
                   </div>

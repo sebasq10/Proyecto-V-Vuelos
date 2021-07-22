@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aerolineas.cs" />
     <Compile Include="Bitacoras.cs" />
     <Compile Include="Consecutivos.cs" />
+    <Compile Include="Paises.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Puertas.cs" />
     <Compile Include="Usuario.cs" />

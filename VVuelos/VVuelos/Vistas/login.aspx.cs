@@ -18,5 +18,10 @@ namespace VVuelos.Vistas
         {
             Response.Redirect("login.aspx");
         }
+
+        public static int Login(string cuenta, string contrasena)
+        {
+
+        }
     }
 }
