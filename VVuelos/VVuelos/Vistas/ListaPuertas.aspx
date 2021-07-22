@@ -22,6 +22,7 @@
 </head>
 
 <body>
+        <form runat="server">
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="bootstrap" viewBox="0 0 118 94">
       <path fill-rule="evenodd" clip-rule="evenodd"
@@ -90,7 +91,7 @@
                   <li><a href="Errores.aspx" class="link-dark rounded text-white">Errores</a></li>
                   <li><a href="Descargas.aspx" class="link-dark rounded text-white">Descargas</a></li>
                   <li><a href="AerolineasPais.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
-                  <li><a href="PActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
+                  <li><a href="PuertasActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
                 </ul>
               </div>
             </li>
@@ -139,62 +140,37 @@
             <div class="container mb-4">
               <div class="row">
                 <div class="col-4">
-                  <div class="table-responsive-lg col-md-11">
-                    <table class="table">
-                      <thead class="table-primario-dark">
-                        <tr>
-                          <th scope="col">Código</th>
-                          <th scope="col">Número</th>
-                          <th scope="col">Detalle</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">PA-1</th>
-                          <td>1</td>
-                          <td class="text-success">Abierta</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">PA-2</th>
-                          <td>2</td>
-                          <td class="text-success">Abierta</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">PA-3</th>
-                          <td>3</td>
-                          <td class="text-success">Abierta</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">PA-4</th>
-                          <td>3</td>
-                          <td class="text-danger">Cerrada</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">PA-5</th>
-                          <td>3</td>
-                          <td class="text-danger">Cerrada</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
+                <asp:GridView ID="tabla_Puertas" AutoGenerateColumns="false" class="table" border="0" runat="server">
+                  <headerstyle CssClass="table-primario-dark"/>
+                    <Columns>
+                        <asp:BoundField DataField="Cod_Puerta" HeaderText="Código de Puerta" />
+                        <asp:BoundField DataField="Numero" HeaderText="Número" />
+                        <asp:BoundField DataField="Detalle" HeaderText="Detalle" />
+                     <asp:TemplateField>
+              <ItemTemplate>
+                 <asp:LinkButton ID="editar_Puerta" text="Seleccionar" type="button" class="btn btn-primary" runat="server" CommandArgument='<%# Eval("Cod_Puerta") %>' OnClick="editar_Puerta_Click"></asp:LinkButton>
+               </ItemTemplate>
+             </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
                 </div>
                 <div class="col-8">
                   <div class="form-group row mb-3">
                     <label for="numeroConsecutivo" class="col-sm-2 col-form-label">Código Puerta:</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="numeroConsecutivo" placeholder="" value="PA-1" readonly>
+                       <asp:TextBox runat="server" type="number" class="form-control" id="codigoPuerta" enabled ="false"/>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
                     <label for="numeroConsecutivo" class="col-sm-2 col-form-label">Número:</label>
                     <div class="col-sm-2">
-                      <input type="text" class="form-control" id="numeroConsecutivo" placeholder="" value="1">
+                       <asp:TextBox runat="server" type="number" class="form-control" id="numeroPuerta"/>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
                     <label for="numeroConsecutivo" class="col-sm-2 col-form-label">Abierto:</label>
                     <div class="col-sm-2">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                      <asp:CheckBox ID="puertachk" runat="server" Checked="false" AutoPostBack="true" />
                     </div>
                   </div>
                   <div class="form-group row mb-3">
@@ -215,5 +191,7 @@
 
   <script src="bootstrap-5.0.1-dist/js/bootstrap.bundle.min.js"></script>
   <script src="sidebars.js"></script>
+        </form>
 </body>
+
 </html>

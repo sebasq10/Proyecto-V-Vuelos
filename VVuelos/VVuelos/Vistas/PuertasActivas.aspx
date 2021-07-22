@@ -91,7 +91,7 @@
                   <li><a href="Errores.aspx" class="link-dark rounded text-white">Errores</a></li>
                   <li><a href="Descargas.aspx" class="link-dark rounded text-white">Descargas</a></li>
                   <li><a href="AerolineasPais.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
-                  <li><a href="PActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
+                  <li><a href="PuertasActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
                 </ul>
               </div>
             </li>
@@ -110,7 +110,7 @@
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item disabled">Consultas</li>
                       <li class="breadcrumb-item disabled">Bitácora</li>
-                      <li class="breadcrumb-item active" aria-current="page"><a href="PActivas.aspx">Puertas</a></li>
+                      <li class="breadcrumb-item active" aria-current="page"><a href="PuertasActivas.aspx">Puertas</a></li>
                     </ol>
                   </nav>
                 </div>

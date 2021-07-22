@@ -91,7 +91,7 @@
                   <li><a href="Errores.aspx" class="link-dark rounded text-white">Errores</a></li>
                   <li><a href="Descargas.aspx" class="link-dark rounded text-white">Descargas</a></li>
                   <li><a href="AerolineasPais.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
-                  <li><a href="PActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
+                  <li><a href="PuertasActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
                 </ul>
               </div>
             </li>

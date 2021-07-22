@@ -2,7 +2,7 @@
 
 <html>
 <head>
-    <form runat="server">
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
@@ -20,7 +20,7 @@
   <!-- CSS Sidebar -->
   <link href="Resources/sidebars.css" rel="stylesheet">
 </head>
-
+    <form runat="server">
 <body>
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -89,7 +89,7 @@
                   <li><a href="Errores.aspx" class="link-dark rounded text-white">Errores</a></li>
                   <li><a href="Descargas.aspx" class="link-dark rounded text-white">Descargas</a></li>
                   <li><a href="AerolineasPais.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
-                  <li><a href="PActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
+                  <li><a href="PuertasActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
                 </ul>
               </div>
             </li>

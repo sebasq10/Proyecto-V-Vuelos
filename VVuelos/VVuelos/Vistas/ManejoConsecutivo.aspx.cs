@@ -26,10 +26,6 @@ namespace VVuelos.Vistas
                     Consecutivos consecutivo = new Consecutivos();
                     DataSet datatest;
                     datatest = consecutivo.cargar_consecutivo_id(ref mensaje_error, ref numero_error, int.Parse(Request.QueryString["codigo"].ToString()));
-                    codigostr = datatest.Tables[0].Rows[0][0].ToString();
-                    codigostr = datatest.Tables[0].Rows[0][1].ToString();
-                    codigostr = datatest.Tables[0].Rows[0][2].ToString();
-                    var item = descripcionConsecutivo.Items.FindByValue("1");
                     descripcionConsecutivo.SelectedIndex = int.Parse(datatest.Tables[0].Rows[0][1].ToString()) - 1;
                     descripcionConsecutivo.Enabled = false;
                     numeroConsecutivo.Text = datatest.Tables[0].Rows[0][2].ToString();
