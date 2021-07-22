@@ -36,7 +36,6 @@
                     <label for="password" class="sr-only">Contraseña</label>
                     <input type="password" name="password" id="password" class="form-control" placeholder="***********">
                   </div>
-                  <a href="ListaUsuarios.aspx" name="login" id="login" class="btn btn-block login-btn mb-4">Login</a>
                 </form>
                 <!-- <a href="#!" class="forgot-password-link">Forgot password?</a>
                 <p class="login-card-footer-text">Don't have an account? <a href="#!" class="text-reset">Register here</a></p>

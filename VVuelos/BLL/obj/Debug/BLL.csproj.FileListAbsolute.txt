@@ -16,3 +16,12 @@ C:\Users\mmart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.cspr
 C:\Users\mmart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\mmart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.dll
 C:\Users\mmart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.pdb
+C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\bin\Debug\BLL.dll
+C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\bin\Debug\BLL.pdb
+C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\bin\Debug\DAL.dll
+C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\bin\Debug\DAL.pdb
+C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.dll
+C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.pdb
