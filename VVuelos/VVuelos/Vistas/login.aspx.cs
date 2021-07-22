@@ -13,5 +13,10 @@ namespace VVuelos.Vistas
         {
 
         }
+
+        protected void login_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("login.aspx");
+        }
     }
 }
