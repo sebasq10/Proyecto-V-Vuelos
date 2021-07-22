@@ -19,7 +19,7 @@ namespace VVuelos.Vistas
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (numeroConsecutivo.Text == String.Empty)
+            if (!IsPostBack)
             {
                 if (Request.QueryString["codigo"].ToString() != "0")//Confirmar si se esta pasando un codigo de consecutivo
                 {
@@ -40,11 +40,11 @@ namespace VVuelos.Vistas
                 }
                 else
                 {
-                    //prefijochk.Checked = false;
-                    //rangochk.Checked = false;
-                    //rangoConsecutivoInicial.Enabled = false;
-                    //rangoConsecutivoFinal.Enabled = false;
-                    //prefijoConsecutivo.Enabled = false;
+                    prefijochk.Checked = false;
+                    rangochk.Checked = false;
+                    rangoConsecutivoInicial.Enabled = false;
+                    rangoConsecutivoFinal.Enabled = false;
+                    prefijoConsecutivo.Enabled = false;
                 }
             }
 
@@ -52,28 +52,28 @@ namespace VVuelos.Vistas
 
         protected void prefijochk_CheckedChanged(object sender, EventArgs e)
         {
-            //if(prefijoConsecutivo.Enabled == false)
-            //{
-            //    prefijoConsecutivo.Enabled = true;
-            //}
-            //else
-            //{
-            //    prefijoConsecutivo.Enabled = false;
-            //}
+            if (prefijoConsecutivo.Enabled == false)
+            {
+                prefijoConsecutivo.Enabled = true;
+            }
+            else
+            {
+                prefijoConsecutivo.Enabled = false;
+            }
         }
 
         protected void rangochk_CheckedChanged(object sender, EventArgs e)
         {
-            //if (rangoConsecutivoInicial.Enabled == false)
-            //{
-            //    rangoConsecutivoInicial.Enabled = true;
-            //    rangoConsecutivoFinal.Enabled = true;
-            //}
-            //else
-            //{
-            //    rangoConsecutivoInicial.Enabled = false;
-            //    rangoConsecutivoFinal.Enabled = false;
-            //}
+            if (rangoConsecutivoInicial.Enabled == false)
+            {
+                rangoConsecutivoInicial.Enabled = true;
+                rangoConsecutivoFinal.Enabled = true;
+            }
+            else
+            {
+                rangoConsecutivoInicial.Enabled = false;
+                rangoConsecutivoFinal.Enabled = false;
+            }
         }
 
         protected void cancelarConsecutivobtn_Click(object sender, EventArgs e)
@@ -89,26 +89,26 @@ namespace VVuelos.Vistas
                 Consecutivos consecutivo = new Consecutivos();
                 DataSet datatest;
                 datatest = consecutivo.existe_tipo_consecutivo(ref mensaje_error, ref numero_error, int.Parse(descripcionConsecutivo.SelectedValue));
-                var teststr = rangoConsecutivoInicial.Text;
-                if (Request.QueryString["codigo"].ToString() != "0")
+                if (numeroConsecutivo.Text != String.Empty && int.Parse(rangoConsecutivoInicial.Text) < int.Parse(rangoConsecutivoFinal.Text))
                 {
-                    consecutivo.editar_consecutivo(ref mensaje_error, ref numero_error, int.Parse(descripcionConsecutivo.SelectedValue), prefijoConsecutivo.Text, rangoConsecutivoInicial.Text, rangoConsecutivoFinal.Text);
-                    Response.Write("<script>alert('El consecutivo se ha cambiado de forma satisfactoria');</script>");
-                    ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Only alert Message');", true);
-                    Response.Redirect("ListaConsecutivos.aspx");
-                }
-                else
-                {
-                    if (datatest.Tables[0].Rows.Count == 0)
+                    if (Request.QueryString["codigo"].ToString() != "0")
                     {
-                        consecutivo.insertar_consecutivo(ref mensaje_error, ref numero_error, descripcionConsecutivo.SelectedValue, numeroConsecutivo.Text, prefijoConsecutivo.Text, rangoConsecutivoInicial.Text, rangoConsecutivoFinal.Text);
-                        Response.Write("<script>alert('El consecutivo se ha ingresado de forma satisfactoria');</script>");
-                        ScriptManager.RegisterStartupScript(this, GetType(), "showalert", "alert('Only alert Message');", true);
+                        consecutivo.editar_consecutivo(ref mensaje_error, ref numero_error, int.Parse(descripcionConsecutivo.SelectedValue), prefijoConsecutivo.Text, rangoConsecutivoInicial.Text, rangoConsecutivoFinal.Text);
+                        Response.Write("<script>alert('El consecutivo se modificado ingresado de forma satisfactoria');</script>");
                         Response.Redirect("ListaConsecutivos.aspx");
                     }
                     else
                     {
-                        Response.Write("<script>alert('El tipo de Consecutivo que quiere ingresar ya existe, por favor seleccione un valor diferente');</script>");
+                        if (datatest.Tables[0].Rows.Count == 0)
+                        {
+                            consecutivo.insertar_consecutivo(ref mensaje_error, ref numero_error, descripcionConsecutivo.SelectedValue, numeroConsecutivo.Text, prefijoConsecutivo.Text, rangoConsecutivoInicial.Text, rangoConsecutivoFinal.Text);
+                            Response.Write("<script>alert('El consecutivo se ha ingresado de forma satisfactoria');</script>");
+                            Response.Redirect("ListaConsecutivos.aspx");
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('El tipo de Consecutivo que quiere ingresar ya existe, por favor seleccione un valor diferente');</script>");
+                        }
                     }
                 }
             }

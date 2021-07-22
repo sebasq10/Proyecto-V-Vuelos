@@ -13,5 +13,14 @@ namespace VVuelos.Vistas
 
     public partial class Bitacora
     {
+
+        /// <summary>
+        /// tabla_Bitacora control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView tabla_Bitacora;
     }
 }

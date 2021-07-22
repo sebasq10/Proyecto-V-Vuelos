@@ -23,6 +23,7 @@
 </head>
 
 <body>
+        <form runat="server">
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <symbol id="bootstrap" viewBox="0 0 118 94">
       <path fill-rule="evenodd" clip-rule="evenodd"
@@ -53,17 +54,17 @@
                 data-bs-target="#seguridad-collapse" aria-expanded="true">
                 Seguridad
               </button>
-              <div class="collapse ms-3" id="seguridad-collapse">
+              <div class=" ms-3" id="seguridad-collapse">
                 <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse"
                   data-bs-target="#usuarios-collapse" aria-expanded="false">
                   Usuarios
                 </button>
-                <div class="collapse" id="usuarios-collapse">
+                <div class="" id="usuarios-collapse">
                   <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="NuevoUsuario.html" class="link-dark rounded text-white">Crear Usuario</a></li>
-                    <li><a href="ListaUsuarios.html" class="link-dark rounded text-white">Ver Usuario</a></li>
+                    <li><a href="NuevoUsuario.aspx" class="link-dark rounded text-white">Crear Usuario</a></li>
+                    <li><a href="ListaUsuarios.aspx" class="link-dark rounded text-white">Ver Usuario</a></li>
                   </ul>
-                  <a class="btn align-items-center rounded collapsed text-white" href="CambiarContrasena.html"
+                  <a class="btn align-items-center rounded collapsed text-white" href="CambiarContrasena.aspx"
                     role="button" aria-expanded="false">
                     Cambiar Contraseña
                   </a>
@@ -73,25 +74,25 @@
             <li class="mb-1">
               <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse"
                 data-bs-target="#administracion-collapse" aria-expanded="false">Administración</button>
-              <div class="collapse" id="administracion-collapse">
+              <div class="" id="administracion-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="ListaConsecutivos.html" class="link-dark rounded text-white">Consecutivos</a></li>
-                  <li><a href="ListaPaises.html" class="link-dark rounded text-white">Países</a></li>
-                  <li><a href="ListaAerolineas.html" class="link-dark rounded text-white">Aerolíneas</a></li>
-                  <li><a href="ListaPuertas.html" class="link-dark rounded text-white">Puertas del Aeropuerto</a></li>
+                  <li><a href="ListaConsecutivos.aspx" class="link-dark rounded text-white">Consecutivos</a></li>
+                  <li><a href="ListaPaises.aspx" class="link-dark rounded text-white">Países</a></li>
+                  <li><a href="ListaAerolineas.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
+                  <li><a href="ListaPuertas.aspx" class="link-dark rounded text-white">Puertas del Aeropuerto</a></li>
                 </ul>
               </div>
             </li>
             <li class="mb-1">
               <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse"
                 data-bs-target="#consultas-collapse" aria-expanded="false">Consultas</button>
-              <div class="collapse show" id="consultas-collapse">
+              <div class=" show" id="consultas-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="Bitacora.html" class="link-dark rounded text-white">Bitácora</a></li>
-                  <li><a href="Errores.html" class="link-dark rounded text-white">Errores</a></li>
-                  <li><a href="Descargas.html" class="link-dark rounded text-white">Descargas</a></li>
-                  <li><a href="AerolineasPais.html" class="link-dark rounded text-white">Aerolíneas</a></li>
-                  <li><a href="PActivas.html" class="link-dark rounded text-white">Puertas</a></li>
+                  <li><a href="Bitacora.aspx" class="link-dark rounded text-white">Bitácora</a></li>
+                  <li><a href="Errores.aspx" class="link-dark rounded text-white">Errores</a></li>
+                  <li><a href="Descargas.aspx" class="link-dark rounded text-white">Descargas</a></li>
+                  <li><a href="AerolineasPais.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
+                  <li><a href="PActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
                 </ul>
               </div>
             </li>
@@ -110,7 +111,7 @@
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item disabled">Consultas</li>
                       <li class="breadcrumb-item disabled">Bitácora</li>
-                      <li class="breadcrumb-item active" aria-current="page"><a href="Bitacora.html">Bitácora</a></li>
+                      <li class="breadcrumb-item active" aria-current="page"><a href="Bitacora.aspx">Bitácora</a></li>
                     </ol>
                   </nav>
                 </div>
@@ -138,47 +139,21 @@
           <!-- Contenedor Principal -->
           <div class="col p-5">
             <p class="h3 row mb-4">Bitacora</p>
-            <div class="table-responsive-lg col-md-10">
-              <table class="table">             
-                <thead class="table-primario-dark">
-                  <tr>
-                    <th scope="col">Codigo</th>
-                    <th scope="col">Accion</th>
-                    <th scope="col">Fecha</th>
-                    <th scope="col">Descripcion</th>
-                    <th scope="col">Acciones</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Eliminar</button>
-                    </td>
-                  <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Eliminar</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Eliminar</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <a class="btn btn-success" href="ManejoConsecutivo.html">Nuevo</a></li>
+                <asp:GridView ID="tabla_Bitacora" AutoGenerateColumns="false" class="table" border="0" runat="server">
+                  <headerstyle CssClass="table-primario-dark"/>
+                    <Columns>
+                        <asp:BoundField DataField="Usuario" HeaderText="Usuario" />
+                        <asp:BoundField DataField="Fecha" HeaderText="Fecha" />
+                        <asp:BoundField DataField="Codigo_Registro" HeaderText="Codigo_Registro" />
+                        <asp:BoundField DataField="Tipo" HeaderText="Tipo" />
+                        <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" />
+                     <asp:TemplateField>
+              <ItemTemplate>
+                 <asp:LinkButton ID="seleccionar_Bitacora" text="Ver Detalle" type="button" class="btn btn-primary" runat="server" CommandArgument='<%# Eval("Codigo_Registro") %>'></asp:LinkButton>
+               </ItemTemplate>
+             </asp:TemplateField>
+                    </Columns>
+                </asp:GridView>
           </div>
         </div>
       </div>
@@ -186,6 +161,7 @@
   </main>
   <script src="Resources/bootstrap-5.0.1-dist/js/bootstrap.bundle.min.js"></script>
   <script src="Resources/sidebars.js"></script>
+            </form>
 </body>
 
 </html>

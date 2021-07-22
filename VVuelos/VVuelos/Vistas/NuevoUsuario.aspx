@@ -53,17 +53,17 @@
                 data-bs-target="#seguridad-collapse" aria-expanded="true">
                 Seguridad
               </button>
-              <div class="collapse show ms-3" id="seguridad-collapse">
+              <div class=" show ms-3" id="seguridad-collapse">
                 <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse"
                   data-bs-target="#usuarios-collapse" aria-expanded="false">
                   Usuarios
                 </button>
-                <div class="collapse show" id="usuarios-collapse">
+                <div class=" show" id="usuarios-collapse">
                   <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                    <li><a href="NuevoUsuario.html" class="link-dark rounded text-white">Crear Usuario</a></li>
-                    <li><a href="ListaUsuarios.html" class="link-dark rounded text-white">Ver Usuario</a></li>
+                    <li><a href="NuevoUsuario.aspx" class="link-dark rounded text-white">Crear Usuario</a></li>
+                    <li><a href="ListaUsuarios.aspx" class="link-dark rounded text-white">Ver Usuario</a></li>
                   </ul>
-                  <a class="btn align-items-center rounded collapsed text-white" href="CambiarContrasena.html"
+                  <a class="btn align-items-center rounded collapsed text-white" href="CambiarContrasena.aspx"
                     role="button" aria-expanded="false">
                     Cambiar Contraseña
                   </a>
@@ -73,25 +73,25 @@
             <li class="mb-1">
               <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse"
                 data-bs-target="#administracion-collapse" aria-expanded="false">Administración</button>
-              <div class="collapse" id="administracion-collapse">
+              <div class="" id="administracion-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="ListaConsecutivos.html" class="link-dark rounded text-white">Consecutivos</a></li>
-                  <li><a href="ListaPaises.html" class="link-dark rounded text-white">Paises</a></li>
-                  <li><a href="ListaAerolineas.html" class="link-dark rounded text-white">Aerolíneas</a></li>
-                  <li><a href="ListaPuertas.html" class="link-dark rounded text-white">Puertas del Aeropuerto</a></li>
+                  <li><a href="ListaConsecutivos.aspx" class="link-dark rounded text-white">Consecutivos</a></li>
+                  <li><a href="ListaPaises.aspx" class="link-dark rounded text-white">Paises</a></li>
+                  <li><a href="ListaAerolineas.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
+                  <li><a href="ListaPuertas.aspx" class="link-dark rounded text-white">Puertas del Aeropuerto</a></li>
                 </ul>
               </div>
             </li>
             <li class="mb-1">
               <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse"
                 data-bs-target="#consultas-collapse" aria-expanded="false">Consultas</button>
-              <div class="collapse" id="consultas-collapse">
+              <div class="" id="consultas-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="Bitacora.html" class="link-dark rounded text-white">Bitácora</a></li>
-                  <li><a href="Errores.html" class="link-dark rounded text-white">Errores</a></li>
-                  <li><a href="Descargas.html" class="link-dark rounded text-white">Descargas</a></li>
-                  <li><a href="AerolineasPais.html" class="link-dark rounded text-white">Aerolíneas</a></li>
-                  <li><a href="PActivas.html" class="link-dark rounded text-white">Puertas</a></li>
+                  <li><a href="Bitacora.aspx" class="link-dark rounded text-white">Bitácora</a></li>
+                  <li><a href="Errores.aspx" class="link-dark rounded text-white">Errores</a></li>
+                  <li><a href="Descargas.aspx" class="link-dark rounded text-white">Descargas</a></li>
+                  <li><a href="AerolineasPais.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
+                  <li><a href="PActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
                 </ul>
               </div>
             </li>
@@ -110,7 +110,7 @@
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item disabled">Seguridad</li>
                       <li class="breadcrumb-item disabled">Usuarios</li>
-                      <li class="breadcrumb-item active" aria-current="page"><a href="NuevoUsuario.html">Crear
+                      <li class="breadcrumb-item active" aria-current="page"><a href="NuevoUsuario.aspx">Crear
                           Usuario</a></li>
                     </ol>
                   </nav>
