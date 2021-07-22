@@ -18,8 +18,8 @@ namespace VVuelos.Vistas
             if (!IsPostBack)
             {
                 Aerolineas aerolineas = new Aerolineas();
-                tabla_Aerolineas.DataSource = aerolineas.cargar_aerolineas(ref mensaje_error, ref numero_error);
-                tabla_Aerolineas.DataBind();
+                tabla_aerolineas.DataSource = aerolineas.cargar_aerolineas(ref mensaje_error, ref numero_error);
+                tabla_aerolineas.DataBind();
             }
         }
 
@@ -28,8 +28,8 @@ namespace VVuelos.Vistas
             string codigo_aerolinea = (sender as LinkButton).CommandArgument;
             Aerolineas aerolineas = new Aerolineas();
             DataSet datatest;
-            datatest = aerolineas.cargar_aerolinea_codigo(ref mensaje_error, ref numero_error, codigo_aerlinea);
-            codigoPuerta.Text = datatest.Tables[0].Rows[0][0].ToString();
+            datatest = aerolineas.cargar_aerolinea_codigo(ref mensaje_error, ref numero_error, codigo_aerolinea);
+            codigoAerolinea.Text = datatest.Tables[0].Rows[0][0].ToString();
         }
     }
 }

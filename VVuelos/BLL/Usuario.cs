@@ -30,5 +30,44 @@ namespace BLL
 
 
         #endregion
+
+        #region variables_conexion
+        SqlConnection conexion;
+        string mensaje_error;
+        int numero_error;
+        string sql;
+        DataSet ds;
+        #endregion
+
+
+        #region procedimientos
+        public DataSet cargar_nombre_usuario(ref string mensajeError, ref int numeroError, string email, string contrasena)
+        {
+            conexion = cls_DAL.trae_conexion("VVuelos", ref mensaje_error, ref numero_error);
+            if (conexion == null)
+            {
+                mensajeError = mensaje_error;
+                numeroError = numero_error;
+                return ds;
+            }
+            else
+            {
+                sql = "cargar_nombre_usuario";
+
+                ParamStruct[] parametros = new ParamStruct[2];
+
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Email", SqlDbType.VarChar, email);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Contrasena", SqlDbType.VarChar, contrasena);
+                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, ref mensaje_error, ref numero_error);
+                if (numero_error != 0)
+                {
+
+                    mensajeError = mensaje_error;
+                    numeroError = numero_error;
+                }
+                return ds;
+            }
+        }
+        #endregion
     }
 }

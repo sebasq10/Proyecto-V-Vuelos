@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="Resources/assets/css/login.css">
 </head>
 <body>
+    <form runat="server">
   <main class="d-flex align-items-center min-vh-100 py-3 py-md-0">
     <div class="container">
       <div class="card login-card">
@@ -30,11 +31,12 @@
               <form action="#!">
                   <div class="form-group">
                     <label for="email" class="sr-only">Cuenta</label>
-                    <input type="email" name="email" id="text" class="form-control" placeholder="Cuenta">
+                    <asp:Textbox type="text" name="email" runat="server" id="email" class="form-control" placeholder="Correo"/>
                   </div>
                   <div class="form-group mb-4">
                     <label for="password" class="sr-only">Contraseña</label>
-                    <input type="password" name="password" id="password" class="form-control" placeholder="***********">
+                    <asp:Textbox type="password" name="password" runat="server" id="password" class="form-control" placeholder="***********"/>
+                    <asp:Button ID="Login" runat="server" text="Login" OnClick="login_Click"/>
                   </div>
                 </form>
                 <!-- <a href="#!" class="forgot-password-link">Forgot password?</a>
@@ -52,6 +54,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</form>
 </body>
 </html>
 
