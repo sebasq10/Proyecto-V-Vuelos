@@ -158,7 +158,7 @@
                   <div class="form-group row mb-3">
                     <label for="numeroConsecutivo" class="col-sm-2 col-form-label">Código Puerta:</label>
                     <div class="col-sm-2">
-                       <asp:TextBox runat="server" type="number" class="form-control" id="codigoPuerta" enabled ="false"/>
+                       <asp:TextBox runat="server" type="text" class="form-control" id="codigoPuerta" enabled ="false"/>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
@@ -175,8 +175,8 @@
                   </div>
                   <div class="form-group row mb-3">
                     <div class="col-sm-4">
-                      <button type="button" class="btn btn-success">Aceptar</button>
-                      <button type="button" class="btn btn-danger">Borrar</button>
+              <asp:Button id="aceptarPuertabtn" runat="server" class="btn btn-success" Text="Aceptar" OnClick="aceptarPuertabtn_Click" />
+              <asp:Button id="cancelarPuertabtn" runat="server" class="btn btn-danger" Text="Cancelar" OnClick="cancelarPuertabtn_Click"/>
                     </div>
                   </div>
                   </form>

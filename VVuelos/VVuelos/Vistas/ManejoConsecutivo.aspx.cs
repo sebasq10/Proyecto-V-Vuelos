@@ -14,7 +14,6 @@ namespace VVuelos.Vistas
     public partial class ManejoConsecutivo : System.Web.UI.Page
     {
         string mensaje_error;
-        string codigostr;
         int numero_error;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -107,7 +106,11 @@ namespace VVuelos.Vistas
                         }
                     }
                 }
-            }
+                else
+                {
+                    Response.Write("<script>alert('El tipo de Rango Inicial tiene que ser menor al Final');</script>");
+                }
+            } 
 
             catch
             {
