@@ -88,7 +88,7 @@ namespace BLL
 
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Puerta", SqlDbType.VarChar, cod_puerta);
 
-                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, ref mensaje_error, ref numero_error);
+                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
                 {
 
@@ -115,6 +115,34 @@ namespace BLL
 
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Descripcion", SqlDbType.VarChar, numero);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Consecutivo", SqlDbType.VarChar, detalle);
+
+                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
+                if (numero_error != 0)
+                {
+
+                    mensajeError = mensaje_error;
+                    numeroError = numero_error;
+                }
+            }
+        }
+
+        public void editar_puerta(ref string mensajeError, ref int numeroError, string cod_puerta, string numero, string detalle)
+        {
+            conexion = cls_DAL.trae_conexion("VVuelos", ref mensaje_error, ref numero_error);
+            if (conexion == null)
+            {
+                mensajeError = mensaje_error;
+                numeroError = numero_error;
+            }
+            else
+            {
+                sql = "editar_puerta";
+
+                ParamStruct[] parametros = new ParamStruct[3];
+
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Puerta", SqlDbType.VarChar, cod_puerta);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Numero", SqlDbType.VarChar, numero);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Detalle", SqlDbType.VarChar, detalle);
 
                 ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
