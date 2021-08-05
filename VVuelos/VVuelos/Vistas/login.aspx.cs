@@ -20,12 +20,28 @@ namespace VVuelos.Vistas
 
         protected void login_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario();
+            Administradores administrador = new Administradores();
             string correo = email.Text;
             string contrasena = password.Text;
             DataSet dataSet;
-            dataSet = usuario.cargar_nombre_usuario(ref mensaje_error, ref numero_error, correo, contrasena);
-            string usr = dataSet.Tables[0].Rows[0][0].ToString();
+            dataSet = administrador.login(ref mensaje_error, ref numero_error, correo, contrasena);
+            if (email.Text != String.Empty && password.Text != String.Empty)
+            {
+                if (dataSet.Tables[0].Rows.Count > 0)
+                {
+                    Session["Usuario"] = email.Text;
+                    string mensaje = Convert.ToString(Session["Usuario"]);
+                    Response.Redirect("ListaUsuarios.aspx");
+                }
+                else
+                {
+                    Response.Write("<script>alert('El usuario o contrasena ingresado no es correcto');</script>");
+                }
+            }
+            else
+            {
+                Response.Write("<script>alert('Por favor llene los campos solicitados');</script>");
+            }
         }
 
     }

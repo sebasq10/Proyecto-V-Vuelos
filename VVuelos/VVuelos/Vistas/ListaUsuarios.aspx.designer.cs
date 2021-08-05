@@ -13,5 +13,68 @@ namespace VVuelos.Vistas
 
     public partial class ListaUsuarios
     {
+
+        /// <summary>
+        /// tabla_Usuarios control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView tabla_Usuarios;
+
+        /// <summary>
+        /// usuarioSeleccionado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox usuarioSeleccionado;
+
+        /// <summary>
+        /// usuarioAdministradorchk control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox usuarioAdministradorchk;
+
+        /// <summary>
+        /// usuarioSeguridadchk control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox usuarioSeguridadchk;
+
+        /// <summary>
+        /// usuarioConsecutivochk control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox usuarioConsecutivochk;
+
+        /// <summary>
+        /// usuarioMantenimientochk control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox usuarioMantenimientochk;
+
+        /// <summary>
+        /// aceptarUsuariobtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button aceptarUsuariobtn;
     }
 }

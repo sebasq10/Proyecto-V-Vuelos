@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Back-End-Master.master.cs" Inherits="VVuelos.Vistas.Back_End_Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+              <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>V-Vuelos Backend</title>
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" runat="server"/>
+  <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet" runat="server"/>
+  <!-- Bootstrap core CSS -->
+  <link href="Resources/bootstrap-5.0.1-dist/css/bootstrap.min.css" rel="stylesheet" runat="server"/>
+  <!-- Bootstrap CUSTOM CSS -->
+  <link rel="stylesheet" href="Resources/assets/css/main_custom.css" runat="server"/>
+  <link href="Resources/proyecto.css" rel="stylesheet" runat="server"/>
+  <!--Se añade el css de proyecto-->
+
+  <!-- CSS Sidebar -->
+  <link href="Resources/sidebars.css" rel="stylesheet">
+</head>
+<body>
+    <form runat="server">
+                    <div class="container-fluid">
+      <div class="row flex-nowrap">
+        <div class="b-example-divider"></div>
+        <div class="flex-shrink-0 p-4 bg-color-primario texto-sidebar-primario" style="width: 280px;">
+          <!--Aquí se cambia el color de background y color del texto (o se cambiaría el color de texto si sirviera. Por alguna razón, solo se cambia algunos textos entonces tuve que hacerlo manual. Marco donde en donde lo hago, Sebastián) -->
+          <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+            <!--Aquí se cambia la imagen, probablemente solo usar link -->
+            <!--<svg class="bi me-2" width="30" height="24"><use xlink:href=""></use></svg>-->
+            <svg class="bi me-2" width="30" height="24">
+              <use
+                xlink:href="https://media.discordapp.net/attachments/393184195729424384/850168225500364800/Avion.png?width=505&height=473">
+              </use>
+            </svg>
+            <span class="fs-5 fw-semibold text-white">V-Vuelos</span>
+          </a>
+          <ul class="list-unstyled ps-0">
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse"
+                data-bs-target="#seguridad-collapse" aria-expanded="true">
+                Seguridad
+              </button>
+              <div class=" show ms-3" id="seguridad-collapse">
+                <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse"
+                  data-bs-target="#usuarios-collapse" aria-expanded="false">
+                  Usuarios
+                </button>
+                <div class=" show" id="usuarios-collapse">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="NuevoUsuario.aspx" class="link-dark rounded text-white">Crear Usuario</a></li>
+                    <li><a href="ListaUsuarios.aspx" class="link-dark rounded text-white">Ver Usuario</a></li>
+                  </ul>
+                  <a class="btn align-items-center rounded collapsed text-white" href="CambiarContrasena.aspx"
+                    role="button" aria-expanded="false">
+                    Cambiar Contraseña
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse"
+                data-bs-target="#administracion-collapse" aria-expanded="false">Administración</button>
+              <div class="" id="administracion-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="ListaConsecutivos.aspx" class="link-dark rounded text-white">Consecutivos</a></li>
+                  <li><a href="ListaPaises.aspx" class="link-dark rounded text-white">Paises</a></li>
+                  <li><a href="ListaAerolineas.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
+                  <li><a href="ListaPuertas.aspx" class="link-dark rounded text-white">Puertas del Aeropuerto</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="mb-1">
+              <button class="btn btn-toggle align-items-center rounded collapsed text-white" data-bs-toggle="collapse"
+                data-bs-target="#consultas-collapse" aria-expanded="false">Consultas</button>
+              <div class="" id="consultas-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="Bitacora.aspx" class="link-dark rounded text-white">Bitácora</a></li>
+                  <li><a href="Errores.aspx" class="link-dark rounded text-white">Errores</a></li>
+                  <li><a href="Descargas.aspx" class="link-dark rounded text-white">Descargas</a></li>
+                  <li><a href="AerolineasPais.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
+                  <li><a href="PuertasActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Fin Sidebar -->
+
+        <!-- Inicio Header -->
+        <div class="col p-0 bg">
+          <header
+            class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 border-bottom bg-color-secundario">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-10">
+
+<asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" / " RenderCurrentNodeAsLink="false">
+</asp:SiteMapPath>
+                </div>
+                <div class="col-2">
+                  <div class="dropdown">
+                    <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-dark"
+                      id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                        <asp:Label ID="UsernameLabel" Text="Administrador" runat="server"></asp:Label>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownUser1">
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><asp:Button id="cerrarSesionbtn" runat="server" class="dropdown-item" Text="Cerrar Sesión" OnClick="cerrarSesionbtn_Click"/>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </header>
+          <!-- Fin Header -->
+
+          <!-- Contenedor Principal -->
+  <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+                      <!-- Fin Contenedor Principal -->
+        </div>
+      </div>
+    </div>
+  <script src="Resources/bootstrap-5.0.1-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="Resources/sidebars.js"></script>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode title="V-Vuelos">
+  <siteMapNode url="" title="Seguridad">
+    <siteMapNode url="" title="Usuarios" >
+      <siteMapNode url="~/Vistas/NuevoUsuario" title="Crear Usuario" />
+      <siteMapNode url="~/Vistas/ListaUsuarios" title="Ver Usuario" />
+    </siteMapNode>
+    <siteMapNode url="~/Vistas/CambiarContrasena" title="Cambiar Contraseña" />
+  </siteMapNode>
+  <siteMapNode url="" title="Administracion">
+    <siteMapNode url="~/Vistas/ListaConsecutivos" title="Consecutivos">
+      <siteMapNode url="~/Vistas/ManejoConsecutivo" title="Manejo Consecutivo" />
+    </siteMapNode>
+    <siteMapNode url="~/Vistas/ListaPaises" title="Paises">
+      <siteMapNode url="" title="Manejo Consecutivo" />
+    </siteMapNode>
+    <siteMapNode url="~/Vistas/ListaAerolineas" title="Aerolineas">
+      <siteMapNode url="" title="Manejo Consecutivo" />
+    </siteMapNode>
+    <siteMapNode url="~/Vistas/ListaPuertas" title="Puertas del Aeropuerto">
+      <siteMapNode url="" title="Manejo Consecutivo" />
+    </siteMapNode>
+  </siteMapNode>
+      <siteMapNode url="" title="Consultas">
+        <siteMapNode url="~/Vistas/Bitacora" title="Bitacora" />
+        <siteMapNode url="~/Vistas/Errores" title="Errores" />
+        <siteMapNode url="~/Vistas/Descargas" title="Descargas" />
+        <siteMapNode url="~/Vistas/AerolineasPais" title="Aerolineas" />
+        <siteMapNode url="~/Vistas/PuertasActivas" title="Puertas" />
+      </siteMapNode>
+    </siteMapNode>
+</siteMap>

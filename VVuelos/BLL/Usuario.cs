@@ -56,8 +56,34 @@ namespace BLL
 
                 ParamStruct[] parametros = new ParamStruct[2];
 
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Email", SqlDbType.VarChar, email);
-                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Contrasena", SqlDbType.VarChar, contrasena);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Nombre_Usuario", SqlDbType.VarChar, email);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Contrasena", SqlDbType.VarChar, contrasena);
+  
+
+                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
+                if (numero_error != 0)
+                {
+
+                    mensajeError = mensaje_error;
+                    numeroError = numero_error;
+                }
+                return ds;
+            }
+        }
+
+        public DataSet cargar_usuarios(ref string mensajeError, ref int numeroError)
+        {
+            conexion = cls_DAL.trae_conexion("VVuelos", ref mensaje_error, ref numero_error);
+            if (conexion == null)
+            {
+                mensajeError = mensaje_error;
+                numeroError = numero_error;
+                return ds;
+            }
+            else
+            {
+                sql = "cargar_usuarios";
+
                 ds = cls_DAL.ejecuta_dataset(conexion, sql, true, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
                 {

@@ -17,7 +17,6 @@ namespace VVuelos.Vistas
         {
             if (!IsPostBack)
             {
-                cargar = false;
                 Puertas puertas = new Puertas();
                 tabla_Puertas.DataSource = puertas.cargar_puertas(ref mensaje_error, ref numero_error);
                 tabla_Puertas.DataBind();

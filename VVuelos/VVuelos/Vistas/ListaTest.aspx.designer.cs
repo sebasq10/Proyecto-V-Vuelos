@@ -8,9 +8,9 @@
 //------------------------------------------------------------------------------
 
 
-namespace VVuelos
+namespace VVuelos.Vistas
 {
-    public partial class _Default
+    public partial class WebForm1
     {
     }
 }

@@ -4,3 +4,9 @@ C:\Users\mmart\source\repos\VVuelos\DAL\obj\Debug\DAL.csproj.AssemblyReference.c
 C:\Users\mmart\source\repos\VVuelos\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\mmart\source\repos\VVuelos\DAL\obj\Debug\DAL.dll
 C:\Users\mmart\source\repos\VVuelos\DAL\obj\Debug\DAL.pdb
+C:\Users\marcomart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\DAL\bin\Debug\DAL.dll
+C:\Users\marcomart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\DAL\bin\Debug\DAL.pdb
+C:\Users\marcomart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\marcomart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\marcomart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.dll
+C:\Users\marcomart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.pdb
