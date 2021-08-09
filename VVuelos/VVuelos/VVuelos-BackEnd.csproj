@@ -138,7 +138,6 @@
     <Content Include="Vistas\Descargas.aspx" />
     <Content Include="Vistas\EditarConsecutivo.aspx" />
     <Content Include="Vistas\Errores.aspx" />
-    <Content Include="Vistas\FE-InicioSesion.aspx" />
     <Content Include="Vistas\ListaAerolineas.aspx" />
     <Content Include="Vistas\ListaConsecutivos.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -236,13 +235,6 @@
     </Compile>
     <Compile Include="Vistas\Errores.aspx.designer.cs">
       <DependentUpon>Errores.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Vistas\FE-InicioSesion.aspx.cs">
-      <DependentUpon>FE-InicioSesion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vistas\FE-InicioSesion.aspx.designer.cs">
-      <DependentUpon>FE-InicioSesion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\ListaAerolineas.aspx.cs">
       <DependentUpon>ListaAerolineas.aspx</DependentUpon>
