@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Front-End-Master.master.cs" Inherits="VVuelos_FrontEnd.Vistas.Front_End_Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form HTML Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+	<!-- Bootstrap -->
+	<link href="Resources/bootstrap-5.0.1-dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom stlylesheet -->
+	<link type="text/css" rel="stylesheet" href="Resources/css/style.css" />
+	<link type="text/css" rel="stylesheet" href="Resources/navbar.css" />
+</head>
+<body>
+		<nav class="navbar fixed-top navbar-dark bg-dark">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">V-Vuelos</a>
+			<form class="d-flex">
+				<button type="button" class="btn btn-outline-primary">Crear Cuenta</button>
+				<button type="button" class="btn btn-outline-primary">Accesar a cuenta</button>
+				<button type="button" class="btn btn-primary">V-Vuelos Backend</button>
+			</form>
+		</div>
+	</nav>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

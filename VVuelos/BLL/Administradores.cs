@@ -94,7 +94,6 @@ namespace BLL
         DataSet ds;
         #endregion
 
-
         #region procedimientos
 
         public DataSet login(ref string mensajeError, ref int numeroError, string usuario, string contrasena)

@@ -7,28 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
-namespace VVuelos_FrontEnd
+namespace VVuelos_FrontEnd.Vistas
 {
-    public partial class SiteMaster
+
+
+    public partial class ListaVuelos
     {
 
         /// <summary>
-        /// HeadContent control.
+        /// tabla_VuelosEntrada control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder HeadContent;
+        protected global::System.Web.UI.WebControls.GridView tabla_VuelosEntrada;
 
         /// <summary>
-        /// MainContent control.
+        /// tabla_VuelosSalidas control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.GridView tabla_VuelosSalidas;
     }
 }
