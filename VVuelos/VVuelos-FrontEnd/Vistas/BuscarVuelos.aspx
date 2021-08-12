@@ -32,7 +32,7 @@
 						<asp:BoundField DataField="Fecha" HeaderText="Fecha" />
                      <asp:TemplateField>
               <ItemTemplate>
-                 <asp:LinkButton ID="seleccionar_Vuelo" text="Seleccionar" type="button" class="btn btn-primary" runat="server" CommandArgument='<%# Eval("Cod_Vuelo") %>'></asp:LinkButton>
+                 <asp:LinkButton ID="seleccionar_Vuelo" text="Seleccionar" type="button" class="btn btn-primary" runat="server" CommandArgument='<%# Eval("Cod_Vuelo") %>' OnClick="seleccionar_Vuelo_Click"></asp:LinkButton>
                </ItemTemplate>
              </asp:TemplateField>
                     </Columns>

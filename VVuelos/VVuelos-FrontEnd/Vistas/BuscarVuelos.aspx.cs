@@ -25,10 +25,11 @@ namespace VVuelos_FrontEnd.Vistas
             string fecha1 = Fechatxt.Text;
             DateTime fecha = Convert.ToDateTime(fecha1);
             string x = fecha.ToString("MM/dd/yyyy");
+            fecha = Convert.ToDateTime(x);
             DataSet dataSet;
             if (Destinotxt.Text != String.Empty && Fechatxt.Text != String.Empty)
             {
-                dataSet = vuelo.cargar_vuelos_filtro(ref mensaje_error, ref numero_error, x, destino);
+                dataSet = vuelo.cargar_vuelos_filtro(ref mensaje_error, ref numero_error, fecha, destino);
                 if (dataSet.Tables[0].Rows.Count > 0)
                 {
                     tabla_BuscarVuelos.DataSource = dataSet;
@@ -44,6 +45,11 @@ namespace VVuelos_FrontEnd.Vistas
                 Response.Write("<script>alert('Por favor llene los campos solicitados');</script>");
             }
         
-    }
+        }
+
+        protected void seleccionar_Vuelo_Click(object sender, EventArgs e)
+        {
+            string seleccionvuelo = (sender as LinkButton).CommandArgument;
+        }
     }
 }
