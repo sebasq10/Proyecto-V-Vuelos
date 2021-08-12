@@ -153,6 +153,9 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Vistas\BuscarVuelos.aspx" />
     <Content Include="Vistas\ListaVuelos.aspx" />
+    <Content Include="Vistas\InicioSesion.aspx" />
+    <Content Include="Vistas\UsuarioNuevo.aspx" />
+    <Content Include="Vistas\cambiarContrasena.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -190,6 +193,27 @@
     </Compile>
     <Compile Include="Vistas\ListaVuelos.aspx.designer.cs">
       <DependentUpon>ListaVuelos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\InicioSesion.aspx.cs">
+      <DependentUpon>InicioSesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\InicioSesion.aspx.designer.cs">
+      <DependentUpon>InicioSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\UsuarioNuevo.aspx.cs">
+      <DependentUpon>UsuarioNuevo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\UsuarioNuevo.aspx.designer.cs">
+      <DependentUpon>UsuarioNuevo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\cambiarContrasena.aspx.cs">
+      <DependentUpon>cambiarContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\cambiarContrasena.aspx.designer.cs">
+      <DependentUpon>cambiarContrasena.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
