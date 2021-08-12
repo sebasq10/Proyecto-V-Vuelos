@@ -18,17 +18,21 @@
 	<link href="Resources/bootstrap-5.0.1-dist/css/bootstrap.min.css" rel="stylesheet">
 
 	<!-- Custom stlylesheet -->
+			<link type="text/css" href="Resources/css/main.css" rel="stylesheet" />
+	<link href="Resources/vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="Resources/vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
 	<link type="text/css" rel="stylesheet" href="Resources/css/style.css" />
 	<link type="text/css" rel="stylesheet" href="Resources/navbar.css" />
+
 </head>
 <body>
 		<nav class="navbar fixed-top navbar-dark bg-dark">
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">V-Vuelos</a>
 			<form class="d-flex">
-				<button type="button" class="btn btn-outline-primary">Crear Cuenta</button>
-				<button type="button" class="btn btn-outline-primary">Accesar a cuenta</button>
-				<button type="button" class="btn btn-primary">V-Vuelos Backend</button>
+				<button type="button" class="btn btn-outline-primary m-2">Crear Cuenta</button>
+				<button type="button" class="btn btn-outline-primary m-2">Accesar a cuenta</button>
+				<button type="button" class="btn btn-primary m-2">V-Vuelos Backend</button>
 			</form>
 		</div>
 	</nav>

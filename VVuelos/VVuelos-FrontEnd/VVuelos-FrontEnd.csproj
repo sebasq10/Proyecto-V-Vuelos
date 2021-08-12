@@ -151,6 +151,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Vistas\BuscarVuelos.aspx" />
     <Content Include="Vistas\ListaVuelos.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -168,6 +169,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\BuscarVuelos.aspx.cs">
+      <DependentUpon>BuscarVuelos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\BuscarVuelos.aspx.designer.cs">
+      <DependentUpon>BuscarVuelos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Front-End-Master.Master.cs">
       <DependentUpon>Front-End-Master.Master</DependentUpon>

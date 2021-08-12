@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Vistas/Front-End-Master.Master" AutoEventWireup="true" CodeBehind="ListaVuelos.aspx.cs" Inherits="VVuelos_FrontEnd.Vistas.ListaVuelos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <div class="container">
-				<div class="row">
+				<div class="row mt-5">
 					<div class="col-md-7 col-md-push-5">
 						<div class="booking-cta">
 							<h1>Llegadas de Vuelos</h1>
@@ -14,11 +14,11 @@
                   <headerstyle CssClass="table-primario-dark"/>
                     <Columns>
                         <asp:BoundField DataField="Cod_Vuelo" HeaderText="Vuelo" />
-						<asp:BoundField DataField="Aerolineas_Cod_Aerolinea" HeaderText="Aerolínea" />
-						<asp:BoundField DataField="Paises_Cod_Pais" HeaderText="Procedencia" />
+						<asp:BoundField DataField="Aerolinea" HeaderText="Aerolínea" />
+						<asp:BoundField DataField="Procedencia" HeaderText="Procedencia" />
 						<asp:BoundField DataField="Fecha" HeaderText="Fecha" />
                         <asp:BoundField DataField="Estado" HeaderText="Estado" />
-                        <asp:BoundField DataField="Puertas_Activas_Cod_Puerta" HeaderText="Puerta" />
+                        <asp:BoundField DataField="Puerta" HeaderText="Puerta" />
                      <asp:TemplateField>
              </asp:TemplateField>
                     </Columns>
@@ -42,11 +42,11 @@
                   <headerstyle CssClass="table-primario-dark"/>
                     <Columns>
                         <asp:BoundField DataField="Cod_Vuelo" HeaderText="Vuelo" />
-						<asp:BoundField DataField="Aerolineas_Cod_Aerolinea" HeaderText="Aerolínea" />
-						<asp:BoundField DataField="Paises_Cod_Pais" HeaderText="Procedencia" />
+						<asp:BoundField DataField="Aerolinea" HeaderText="Aerolínea" />
+						<asp:BoundField DataField="Procedencia" HeaderText="Destino" />
 						<asp:BoundField DataField="Fecha" HeaderText="Fecha" />
                         <asp:BoundField DataField="Estado" HeaderText="Estado" />
-                        <asp:BoundField DataField="Puertas_Activas_Cod_Puerta" HeaderText="Puerta" />
+                        <asp:BoundField DataField="Puerta" HeaderText="Puerta" />
                      <asp:TemplateField>
              </asp:TemplateField>
                     </Columns>

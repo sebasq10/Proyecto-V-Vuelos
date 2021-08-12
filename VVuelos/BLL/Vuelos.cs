@@ -124,6 +124,35 @@ namespace BLL
                 return ds;
             }
         }
+
+        public DataSet cargar_vuelos_filtro(ref string mensajeError, ref int numeroError, string fecha, string nombre_pais)
+        {
+            conexion = cls_DAL.trae_conexion("VVuelos", ref mensaje_error, ref numero_error);
+            if (conexion == null)
+            {
+                mensajeError = mensaje_error;
+                numeroError = numero_error;
+                return ds;
+            }
+            else
+            {
+                sql = "cargar_vuelos_filtro";
+
+                ParamStruct[] parametros = new ParamStruct[2];
+
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Fecha", SqlDbType.VarChar, fecha);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Nombre_Pais", SqlDbType.VarChar, nombre_pais);
+
+                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
+                if (numero_error != 0)
+                {
+
+                    mensajeError = mensaje_error;
+                    numeroError = numero_error;
+                }
+                return ds;
+            }
+        }
         #endregion
     }
 }
