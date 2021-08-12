@@ -9,7 +9,7 @@
         </h1>
       </div>
       <div class="col-md-10 mx-auto col-lg-6">
-        <form class="p-4 p-md-5 border rounded-3 bg-light">
+        <!--<form class="p-4 p-md-5 border rounded-3 bg-light">-->
           <div class="form-floating mb-3">
             <asp:Textbox type="text" name="Usuario" runat="server" id="txtUsr" class="form-control" placeholder="Usuario"/>
 
@@ -20,20 +20,17 @@
             <label for="floatingPassword">Contraseña</label>
           </div>
           <hr class="my-4">
-          <asp:Button ID="Button2" runat="server" text="Iniciar Sesión"/> <!--OnClick="login_Click-->
+          <asp:Button ID="btnLogin" runat="server" text="Iniciar Sesión" OnClick="login_Click" />
           <div class="text-center">
             <p>o inicia sesion con:</p>
             <asp:Button ID="Button1" runat="server" text="Facebook"/> <!--OnClick="login_Click"-->
           </div>
           <div class="row mb-4">
             <div class="col d-flex justify-content-center">
-              <a href="#!"> Cambiar Contraseña </a>
-            </div>
-            <div class="col">
-              <a href="#!">Crear Nueva Cuenta</a>
+              <a href="cambiarContrasena.aspx"> Cambiar Contraseña </a>
             </div>
           </div>
-        </form>
+        <!--</form>-->
       </div>
     </div>
   </div>
