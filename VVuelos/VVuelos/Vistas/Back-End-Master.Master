@@ -32,8 +32,8 @@
             <!--Aquí se cambia la imagen, probablemente solo usar link -->
             <!--<svg class="bi me-2" width="30" height="24"><use xlink:href=""></use></svg>-->
             <svg class="bi me-2" width="30" height="24">
-              <use
-                xlink:href="https://media.discordapp.net/attachments/393184195729424384/850168225500364800/Avion.png?width=505&height=473">
+              <use>
+                <xlink:href="https://media.discordapp.net/attachments/393184195729424384/850168225500364800/Avion.png?width=505&height=473">
               </use>
             </svg>
             <span class="fs-5 fw-semibold text-white">V-Vuelos</span>
@@ -97,9 +97,8 @@
             <div class="container-fluid">
               <div class="row">
                 <div class="col-10">
-
-<asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" / " RenderCurrentNodeAsLink="false">
-</asp:SiteMapPath>
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" / " RenderCurrentNodeAsLink="false">
+                </asp:SiteMapPath>
                 </div>
                 <div class="col-2">
                   <div class="dropdown">
@@ -117,6 +116,7 @@
                   </div>
                 </div>
               </div>
+            </div>
           </header>
           <!-- Fin Header -->
 

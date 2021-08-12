@@ -34,3 +34,12 @@ C:\Users\marcomart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.
 C:\Users\marcomart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\marcomart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.dll
 C:\Users\marcomart\Documents\GitHub\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.pdb
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\BLL\bin\Debug\BLL.dll
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\BLL\bin\Debug\BLL.pdb
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\BLL\bin\Debug\DAL.dll
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\BLL\bin\Debug\DAL.pdb
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.dll
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\BLL\obj\Debug\BLL.pdb

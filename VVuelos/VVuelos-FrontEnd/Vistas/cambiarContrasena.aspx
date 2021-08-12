@@ -8,7 +8,7 @@
                     <h1 class="display-4 fw-bold lh-1 mb-3">Aca podras cambiar tu contraseña</h1>
                 </div>
                 <div class="col-md-10 mx-auto col-lg-6">
-                    <form class="p-4 p-md-5 border rounded-3 bg-light">
+                    <!--<form class="p-4 p-md-5 border rounded-3 bg-light">-->
                     <div class="form-floating mb-3">
                         <asp:Textbox type="text" name="Usuario" runat="server" id="txtUsr" class="form-control" placeholder="Usuario"/>
                         <label for="floatingInput">Usuario</label>
@@ -23,11 +23,11 @@
                         <label for="floatingInput">Nueva Contraseña</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <asp:Textbox type="text" name="ConfContraseña" runat="server" id="ConfPass" class="form-control" placeholder="Confirmar Contraseña"/>
+                        <asp:Textbox type="text" name="ConfContraseña" runat="server" id="txtConfPass" class="form-control" placeholder="Confirmar Contraseña"/>
                         <label for="floatingPassword">Confirmar Contraseña</label>
                     </div>
-                        <asp:Button ID="btnChangePass" runat="server" text="Cambiar Contraseña"/> <!--OnClick="Cambiar_Contrasena_Click"-->
-                        </form>
+                        <asp:Button ID="btnChangePass" runat="server" text="Cambiar Contraseña" OnClick="Cambiar_Click"/> <!--OnClick="Cambiar_Contrasena_Click"-->
+                        <!--</form>-->
                     </div>
                 </div>
             </div>

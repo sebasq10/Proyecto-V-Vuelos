@@ -38,6 +38,6 @@
                 </tbody>
               </table>
             </div>
-            <a class="btn btn-success" href="ManejoConsecutivo.aspx">Nuevo</a></li>
+            <a class="btn btn-success" href="ManejoConsecutivo.aspx">Nuevo</a>
           </div>
 </asp:Content>

@@ -13,5 +13,20 @@ namespace VVuelos_FrontEnd.Vistas
         {
 
         }
+
+        protected void Crear_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("UsuarioNuevo.aspx");
+        }
+
+        protected void Accesar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("InicioSesion.aspx");
+        }
+
+        protected void BackEnd_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("http://localhost:60012/Vistas/login");
+        }
     }
 }

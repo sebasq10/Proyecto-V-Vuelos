@@ -27,8 +27,8 @@
               <div class="brand-wrapper">
                 <img src="Resources/assets/images/logo.svg" alt="logo" class="logo">
               </div>
+
               <p class="login-card-description">Inicia sesión en tu cuenta</p>
-              <form action="#!">
                   <div class="form-group">
                     <label for="email" class="sr-only">Cuenta</label>
                     <asp:Textbox type="text" name="email" runat="server" id="email" class="form-control" placeholder="Correo"/>
@@ -38,7 +38,6 @@
                     <asp:Textbox type="password" name="password" runat="server" id="password" class="form-control" placeholder="***********"/>
                     <asp:Button ID="Login" runat="server" text="Login" OnClick="login_Click"/>
                   </div>
-                </form>
                 <!-- <a href="#!" class="forgot-password-link">Forgot password?</a>
                 <p class="login-card-footer-text">Don't have an account? <a href="#!" class="text-reset">Register here</a></p>
                 <nav class="login-card-footer-nav">

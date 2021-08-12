@@ -26,17 +26,20 @@
 
 </head>
 <body>
+	<form runat="server">
 		<nav class="navbar fixed-top navbar-dark bg-dark">
 		<div class="container-fluid">
-			<a class="navbar-brand" href="#">V-Vuelos</a>
-			<form class="d-flex">
-				<button type="button" class="btn btn-outline-primary m-2">Crear Cuenta</button>
-				<button type="button" class="btn btn-outline-primary m-2">Accesar a cuenta</button>
-				<button type="button" class="btn btn-primary m-2">V-Vuelos Backend</button>
-			</form>
+			<a class="navbar-brand" href="BuscarVuelos.aspx">V-Vuelos</a>
+			<div class="d-flex">
+				<asp:Button type="button" runat="server" class="btn btn-outline-primary m-2" OnClick="Crear_Click" Text="Crear Cuenta" /></span>
+				<!--<a href="UsuarioNuevo.aspx" class="link-dark rounded text-white">Consecutivos</a>-->
+				<asp:Button type="button" runat="server" class="btn btn-outline-primary m-2" OnClick="Accesar_Click" Text="Accesar Cuenta" /></span>
+				<!--<a href="InicioSesion.aspx" class="link-dark rounded text-white">Consecutivos</a>-->
+				<asp:Button type="button" runat="server" class="btn btn-primary m-2" OnClick="BackEnd_Click" Text="V-VuelosBackEnd" /></span>
+				<!--<a href="login.aspx" class="link-dark rounded text-white">Consecutivos</a>-->
+			</div>
 		</div>
 	</nav>
-    <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>

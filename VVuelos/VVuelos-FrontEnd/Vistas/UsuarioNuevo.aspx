@@ -8,7 +8,7 @@
 				</h1>
 			</div>
 			<div class="col-md-10 mx-auto col-lg-6">
-				<form class="p-4 p-md-5 border rounded-3 bg-light">
+				<!--<form class="p-4 p-md-5 border rounded-3 bg-light">-->
 					<div class="form-floating mb-3">
 						<asp:Textbox type="text" name="Nombre" runat="server" id="txtFirstname" class="form-control" placeholder="Nombre"/>
 						<label for="floatingInput">Nombre</label>
@@ -34,20 +34,21 @@
 						</div>
 						<div class="col-md">
 							<div class="form-floating">
-								<asp:Button ID="btnVerify" runat="server" text="Verificar Cuenta"/> <!--OnClick="Verifify_Click"-->
+								<asp:Button ID="btnVerify" runat="server" text="Verificar Cuenta" OnClick="Verify_Click"/>
 							</div>
 						</div>
 					</div>
 					<div class="form-floating mb-3">
-						<input type="password" class="form-control" id="floatingPassword" placeholder="Password">
 						<asp:Textbox type="text" name="Contraseña" runat="server" id="txtPass" class="form-control" placeholder="Contraseña"/>
 						<label for="floatingInput">Contraseña</label>
 					</div>
+					<div class="form-floating mb-3">
+						<asp:Textbox type="text" name="ConfirmarContraseña" runat="server" id="txtConfPass" class="form-control" placeholder="Confirmar Contraseña"/>
+						<label for="floatingInput">Confirmar Contraseña</label>
+					</div>
 					<hr class="my-4">
-					<button class="w-100 btn btn-lg btn-primary" type="submit">Registrarse</button>
-					<asp:Button ID="btnConfirm" runat="server" text="Registrarse" /> <!--OnClick="Register_Click"-->
-					<label for="floatingInput">Confirmar contraseña</label>
-				</form>
+					<asp:Button ID="btnConfirm" runat="server" text="Registrarse" OnClick="Confirm_Click"/>
+				<!--</form>-->
 			</div>
 		</div>
 	</div>
