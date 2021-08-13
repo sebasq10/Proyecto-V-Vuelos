@@ -1,10 +1,10 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Vistas/Front-End-Master.Master" CodeBehind="UsuarioNuevo.aspx.cs" Inherits="VVuelos_FrontEnd.Vistas.WebForm2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+	<div class="container col-xl-10 col-xxl-8 px-4 py-5 mt-5">
 		<div class="row align-items-center g-lg-5 py-5">
 			<div class="col-lg-5 text-center text-lg-start">
-				<h1 class="display-4 fw-bold lh-1 mb-3">Regístrate para poder sacar el máximo provecho de V-Vuelos
+				<h1 class="display-4 lh-1 mb-3" style="color: #fff;">Regístrate para poder sacar el máximo provecho de V-Vuelos
 				</h1>
 			</div>
 			<div class="col-md-10 mx-auto col-lg-6">
@@ -34,20 +34,20 @@
 						</div>
 						<div class="col-md">
 							<div class="form-floating">
-								<asp:Button ID="btnVerify" runat="server" text="Verificar Cuenta" OnClick="Verify_Click"/>
+								<asp:Button class="btn- btn-info" ID="btnVerify" runat="server" text="Verificar Cuenta" OnClick="Verify_Click"/>
 							</div>
 						</div>
 					</div>
 					<div class="form-floating mb-3">
-						<asp:Textbox type="text" name="Contraseña" runat="server" id="txtPass" class="form-control" placeholder="Contraseña"/>
+						<asp:Textbox type="password" name="Contraseña" runat="server" id="txtPass" class="form-control" placeholder="Contraseña"/>
 						<label for="floatingInput">Contraseña</label>
 					</div>
 					<div class="form-floating mb-3">
-						<asp:Textbox type="text" name="ConfirmarContraseña" runat="server" id="txtConfPass" class="form-control" placeholder="Confirmar Contraseña"/>
+						<asp:Textbox type="password" name="ConfirmarContraseña" runat="server" id="txtConfPass" class="form-control" placeholder="Confirmar Contraseña"/>
 						<label for="floatingInput">Confirmar Contraseña</label>
 					</div>
 					<hr class="my-4">
-					<asp:Button ID="btnConfirm" runat="server" text="Registrarse" OnClick="Confirm_Click"/>
+					<asp:Button class="btn- btn-warning" ID="btnConfirm" runat="server" text="Registrarse" OnClick="Confirm_Click"/>
 				<!--</form>-->
 			</div>
 		</div>

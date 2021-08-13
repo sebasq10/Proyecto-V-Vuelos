@@ -2,10 +2,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-	<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+	<div class="container col-xl-10 col-xxl-8 px-4 py-5 mt-5">
     <div class="row align-items-center g-lg-5 py-5">
       <div class="col-lg-5 text-center text-lg-start">
-        <h1 class="display-4 fw-bold lh-1 mb-3">Inicia sesion para poder sacar el máximo provecho de V-Vuelos
+        <h1 class="display-4 lh-1 mb-3" style="color: #fff">Inicia sesion para poder sacar el máximo provecho de V-Vuelos
         </h1>
       </div>
       <div class="col-md-10 mx-auto col-lg-6">
@@ -20,14 +20,14 @@
             <label for="floatingPassword">Contraseña</label>
           </div>
           <hr class="my-4">
-          <asp:Button ID="btnLogin" runat="server" text="Iniciar Sesión" OnClick="login_Click" />
+          <asp:Button class="btn- btn-warning" ID="btnLogin" runat="server" text="Iniciar Sesión" OnClick="login_Click" />
           <div class="text-center">
             <p>o inicia sesion con:</p>
             <asp:Button ID="Button1" runat="server" text="Facebook"/> <!--OnClick="login_Click"-->
           </div>
           <div class="row mb-4">
             <div class="col d-flex justify-content-center">
-              <a href="cambiarContrasena.aspx"> Cambiar Contraseña </a>
+              <!--<a href="cambiarContrasena.aspx"> Cambiar Contraseña </a>-->
             </div>
           </div>
         <!--</form>-->

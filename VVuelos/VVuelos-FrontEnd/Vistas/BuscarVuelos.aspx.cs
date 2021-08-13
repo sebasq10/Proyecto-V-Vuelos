@@ -37,7 +37,7 @@ namespace VVuelos_FrontEnd.Vistas
                 }
                 else
                 {
-                    Response.Write("<script>alert('El usuario o contrasena ingresado no es correcto');</script>");
+                    Response.Write("<script>alert('No existen vuelos en la fecha solicitada');</script>");
                 }
             }
             else
