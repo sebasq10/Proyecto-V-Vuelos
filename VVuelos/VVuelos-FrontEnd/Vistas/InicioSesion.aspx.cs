@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Drawing;
 
 namespace VVuelos_FrontEnd.Vistas
 {
@@ -35,12 +36,14 @@ namespace VVuelos_FrontEnd.Vistas
                 }
                 else
                 {
-                    Response.Write("<script>alert('El usuario o contrasena ingresado no es correcto');</script>");
+                    lblError.Text = "El usuario o contrasena ingresado no es correcto";
+                    lblError.ForeColor = Color.Red;
                 }
             }
             else
             {
-                Response.Write("<script>alert('Por favor llene los campos solicitados');</script>");
+                lblError.Text = "Por favor rellene todos los campos solicitados";
+                lblError.ForeColor = Color.Red;
             }
 
         }

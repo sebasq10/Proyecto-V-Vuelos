@@ -15,3 +15,9 @@ C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debu
 C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.dll
 C:\Users\kenda\OneDrive\Documentos\GitHub\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.pdb
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\DAL\bin\Debug\DAL.dll
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\DAL\bin\Debug\DAL.pdb
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.dll
+C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.pdb

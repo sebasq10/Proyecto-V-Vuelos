@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Drawing;
 
 namespace VVuelos_FrontEnd.Vistas
 {
@@ -42,17 +43,20 @@ namespace VVuelos_FrontEnd.Vistas
                     }
                     else
                     {
-                        Response.Write("<script>alert('Los espacios de nueva contraseña son diferentes');</script>");
+                        lblError.Text = "Los espacios de nueva contraseña son diferentes";
+                        lblError.ForeColor = Color.Red;
                     }
                 }
                 else
                 {
-                    Response.Write("<script>alert('El usuario o vieja contraseña ingresada no es correcta');</script>");
+                    lblError.Text = "El usuario o vieja contraseña ingresada no es correcta";
+                    lblError.ForeColor = Color.Red;
                 }
             }
             else
             {
-                Response.Write("<script>alert('Por favor llene los campos solicitados');</script>");
+                lblError.Text = "Por favor llene los campos solicitados";
+                lblError.ForeColor = Color.Red;
             }
         }
     }

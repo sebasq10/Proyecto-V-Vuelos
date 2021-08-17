@@ -35,6 +35,7 @@
 						<div class="col-md">
 							<div class="form-floating">
 								<asp:Button class="btn- btn-info" ID="btnVerify" runat="server" text="Verificar Cuenta" OnClick="Verify_Click"/>
+								<asp:Label ID="lblVerify" runat="server" />
 							</div>
 						</div>
 					</div>
@@ -47,7 +48,43 @@
 						<label for="floatingInput">Confirmar Contraseña</label>
 					</div>
 					<hr class="my-4">
+					<div>
+						<center>
+							<table bordercolor ="black" bgcolor="#62caf0">
+								<h1 class="display-4 lh-1 mb-3" style="color: #fff;">Vaidación CAPTCHA</h1>
+								<tr>
+									<td>
+										Código de Seguridad :
+									</td>
+									<td>
+										<asp:Image ID="imgCaptcha" runat="server" ImageUrl="~/CaptchaImage.aspx" />
+									</td>
+								</tr>
+								<tr>
+									<td>Inserte código aquí</td>
+									<td>
+										<asp:TextBox ID="txtCaptchaText" runat="server" Width="100px" />
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<asp:Button ID="btnSubmit" runat="server"  Text="Confirmar CAPTCHA" OnClick="btnSubmit_Click"/>
+									</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>
+										<asp:Label ID="lblMessage" runat="server" />
+									</td>
+								</tr>
+							</table>
+						</center>
+					</div>
+					
+					<hr class="my-4">
 					<asp:Button class="btn- btn-warning" ID="btnConfirm" runat="server" text="Registrarse" OnClick="Confirm_Click"/>
+					<asp:Label ID="lblError" runat="server" />
 				<!--</form>-->
 			</div>
 		</div>

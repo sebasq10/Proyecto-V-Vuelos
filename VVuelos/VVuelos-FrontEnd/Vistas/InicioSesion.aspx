@@ -16,18 +16,19 @@
             <label for="floatingInput">Usuario</label>
           </div>
           <div class="form-floating mb-3">
-              <asp:Textbox type="text" name="Contraseña" runat="server" id="txtPass" class="form-control" placeholder="Contraseña"/>
+              <asp:Textbox type="password" name="Contraseña" runat="server" id="txtPass" class="form-control" placeholder="Contraseña"/>
             <label for="floatingPassword">Contraseña</label>
           </div>
           <hr class="my-4">
           <asp:Button class="btn- btn-warning" ID="btnLogin" runat="server" text="Iniciar Sesión" OnClick="login_Click" />
+          <asp:Label ID="lblError" runat="server" />
           <div class="text-center">
             <p>o inicia sesion con:</p>
             <asp:Button ID="Button1" runat="server" text="Facebook"/> <!--OnClick="login_Click"-->
           </div>
           <div class="row mb-4">
             <div class="col d-flex justify-content-center">
-              <!--<a href="cambiarContrasena.aspx"> Cambiar Contraseña </a>-->
+             <a href="cambiarContrasena.aspx"> Cambiar Contraseña </a>
             </div>
           </div>
         <!--</form>-->

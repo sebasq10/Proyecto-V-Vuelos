@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Drawing;
 
 namespace VVuelos_FrontEnd.Vistas
 {
@@ -13,7 +14,6 @@ namespace VVuelos_FrontEnd.Vistas
     {
         string mensaje_error;
         int numero_error;
-        bool revisado = false;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -39,27 +39,38 @@ namespace VVuelos_FrontEnd.Vistas
                 txtPass.Text != String.Empty &&
                 txtConfPass.Text != String.Empty)
                 {
-                if (dataSet.Tables[0].Rows.Count > 0) 
+                if (lblVerify.Text != "¡Usuario disponible!") 
                 {
-                    Response.Write("<script>alert('Este usuario no está dispoible. Porfavor utilice otro');</script>");
+                     lblError.Text = "Error de validación de nombre de usuario. Por favor valide correctamente el nombre de usuario";
+                     lblError.ForeColor = Color.Red;
                 } 
                 else 
                 {
                     if (txtConfPass.Text == txtPass.Text)
                     {
-                        usuario.crear_usuario(ref mensaje_error, ref numero_error, usr, first, last, secondLast, email, pass);
-                        Response.Write("<script>alert('Usuario Ingresado exitosamente');</script>");
-                        Response.Redirect("InicioSesion.aspx");
+                        if (lblMessage.Text == "Validacion CAPTCHA confirmada")
+                        {
+                            usuario.crear_usuario(ref mensaje_error, ref numero_error, usr, first, last, secondLast, email, pass);
+                            Response.Write("<script>alert('Usuario Ingresado exitosamente');</script>");
+                            Response.Redirect("InicioSesion.aspx");
+                        }
+                        else 
+                        {
+                            lblError.Text = "Error de validación de CAPTCHA. Por favor valide correctamente CAPTCHA";
+                            lblError.ForeColor = Color.Red;
+                        }
                     }
                     else
                     {
-                        Response.Write("<script>alert('Las contraseñas insertadas son diferentes');</script>");
+                        lblError.Text = "Error de validación de Contraseña. Por favor valide correctamente la contraseña";
+                        lblError.ForeColor = Color.Red;
                     }
                 }
             }
             else
             {
-                Response.Write("<script>alert('Por favor llene los campos solicitados');</script>");
+                lblError.Text = "Por favor rellene los campos solicitados";
+                lblError.ForeColor = Color.Red;
             }
         }
 
@@ -73,18 +84,39 @@ namespace VVuelos_FrontEnd.Vistas
             {
                 if (dataSet.Tables[0].Rows.Count > 0)
                 {
-                    Response.Write("<script>alert('Este usuario no está dispoible. Porfavor utilice otro');</script>");
-                    revisado = false;
+                    lblVerify.Text = "Usuario no disponible";
+                    lblVerify.ForeColor = Color.Red;
                 }
                 else
                 {
-                    Response.Write("<script>alert('¡Usuario Disponible!');</script>");
-                    revisado = true;
+                    lblVerify.Text = "¡Usuario disponible!";
+                    lblVerify.ForeColor = Color.Green;
                 }
             }
             else
             {
-                Response.Write("<script>alert('Porfavor ingrese un usuario');</script>");
+                lblVerify.Text = "Por favor ingresar un usuario";
+                lblVerify.ForeColor = Color.Orange;
+            }
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            bool isCaptchaValid = false;
+            if (Session["CaptchaText"] != null && Session["CaptchaText"].ToString() == txtCaptchaText.Text)
+            {
+                isCaptchaValid = true;
+            }
+
+            if (isCaptchaValid)
+            {
+                lblMessage.Text = "Validacion CAPTCHA confirmada";
+                lblMessage.ForeColor = Color.Green;
+            }
+            else
+            {
+                lblMessage.Text = "Validacion CAPTCHA incorrecta";
+                lblMessage.ForeColor = Color.Red;
             }
         }
     }
