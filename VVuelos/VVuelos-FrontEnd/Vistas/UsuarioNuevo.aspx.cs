@@ -12,6 +12,7 @@ namespace VVuelos_FrontEnd.Vistas
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
+
         string mensaje_error;
         int numero_error;
         protected void Page_Load(object sender, EventArgs e)

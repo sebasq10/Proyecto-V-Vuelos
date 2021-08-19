@@ -207,6 +207,69 @@ namespace BLL
                 }
             }
         }
+
+        public void insertar_administrador(ref string mensajeError, ref int numeroError, string nombre_usuario, string contrasena, string email, string preguntaSeguridad, string respuestaSeguridad, string rol1, string rol2, string rol3, string rol4)
+        {
+            conexion = cls_DAL.trae_conexion("VVuelos", ref mensaje_error, ref numero_error);
+            if (conexion == null)
+            {
+                mensajeError = mensaje_error;
+                numeroError = numero_error;
+            }
+            else
+            {
+                sql = "insertar_administrador";
+
+                ParamStruct[] parametros = new ParamStruct[9];
+
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Nombre_Usuario", SqlDbType.VarChar, nombre_usuario);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Contrasena", SqlDbType.VarChar, contrasena);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Email", SqlDbType.VarChar, email);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 3, "@Pregunta_Sec", SqlDbType.VarChar, preguntaSeguridad);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 4, "@Respuesta_sec", SqlDbType.VarChar, respuestaSeguridad);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 5, "@Rol1", SqlDbType.VarChar, rol1);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 6, "@Rol2", SqlDbType.VarChar, rol2);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 7, "@Rol3", SqlDbType.VarChar, rol3);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 8, "@Rol4", SqlDbType.VarChar, rol4);
+                cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
+                cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
+                cls_DAL.desconectar(conexion, ref mensaje_error, ref numero_error);
+                if (numero_error != 0)
+                {
+
+                    mensajeError = mensaje_error;
+                    numeroError = numero_error;
+                }
+            }
+        }
+
+        public void editar_contrasena_administrador(ref string mensajeError, ref int numeroError, string nombre_usuario, string contrasena)
+        {
+            conexion = cls_DAL.trae_conexion("VVuelos", ref mensaje_error, ref numero_error);
+            if (conexion == null)
+            {
+                mensajeError = mensaje_error;
+                numeroError = numero_error;
+            }
+            else
+            {
+                sql = "editar_contrasena_administrador";
+
+                ParamStruct[] parametros = new ParamStruct[2];
+
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@nombre_usuario", SqlDbType.VarChar, nombre_usuario);
+                cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@contrasena", SqlDbType.VarChar, contrasena);
+
+                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
+                if (numero_error != 0)
+                {
+
+                    mensajeError = mensaje_error;
+                    numeroError = numero_error;
+                }
+            }
+        }
+
         #endregion
     }
 }

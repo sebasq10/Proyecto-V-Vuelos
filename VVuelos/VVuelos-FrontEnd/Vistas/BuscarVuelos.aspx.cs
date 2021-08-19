@@ -44,12 +44,56 @@ namespace VVuelos_FrontEnd.Vistas
             {
                 Response.Write("<script>alert('Por favor llene los campos solicitados');</script>");
             }
-        
+
         }
 
-        protected void seleccionar_Vuelo_Click(object sender, EventArgs e)
+        protected void verificar_Asientos_Click(object sender, EventArgs e)
         {
-            string seleccionvuelo = (sender as LinkButton).CommandArgument;
+            try
+            {
+                if (Session["Cliente"].ToString() != null)
+                {
+                    string cod_vuelo = (sender as LinkButton).CommandArgument;
+                    Session["Cod_Vuelo"] = cod_vuelo;
+                    Response.Redirect("ReservarBoletos.aspx?vuelo=" + cod_vuelo);
+                }
+                else
+                {
+                    Response.Write("<script>alert('Por favor inicie sesión');</script>");
+                }
+            }
+            catch
+            {
+                Response.Write("<script>alert('Por favor inicie sesión');</script>");
+            }
+
+        }
+
+        protected void comprar_Asientos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void guardarAccion_Click(object sender, EventArgs e)
+        {
+            string cod_vuelo = (sender as LinkButton).CommandArgument;
+            Reservaciones reservacion = new Reservaciones();
+            DataSet dataSet;
+            Guid g = Guid.NewGuid();
+            string numReserva = g.ToString().Substring(0, 6);
+            dataSet = reservacion.cargar_asientos_disponibles(ref mensaje_error, ref numero_error, cod_vuelo);
+            if (dataSet.Tables[0].Rows[0][0].ToString() != "0")
+            {
+                Reservaciones reservacion1 = new Reservaciones();
+                DataSet dataSet1;
+                dataSet1 = reservacion1.insertar_reservacion(ref mensaje_error, ref numero_error, asientosReservarTxt.Text, cod_vuelo, Session["Cliente"].ToString(), numReserva);
+                Response.Write("<script>alert('I guess it worked');</script>");
+            }
+            else
+            {
+
+            }
+            Response.Write("<script>alert('No existen mas asientos disponibles en este vuelo');</script>");
         }
     }
 }

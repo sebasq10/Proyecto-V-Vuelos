@@ -32,7 +32,7 @@ namespace VVuelos_FrontEnd.Vistas
                 {
                     Session["Cliente"] = usr;
                     string mensaje = Convert.ToString(Session["Cliente"]);
-                    Response.Redirect("BuscarVuelos.aspx"); /*Falta Vista*/
+                    Response.Redirect("BuscarVuelos.aspx");
                 }
                 else
                 {

@@ -206,10 +206,6 @@ namespace BLL
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Contrasena", SqlDbType.VarChar, contrasena);
 
                 ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
-
-                cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
-                cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
-                cls_DAL.desconectar(conexion, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
                 {
                     mensajeError = mensaje_error;
