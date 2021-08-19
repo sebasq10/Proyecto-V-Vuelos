@@ -80,7 +80,7 @@
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                   <li><a href="Bitacora.aspx" class="link-dark rounded text-white">Bitácora</a></li>
                   <li><a href="Errores.aspx" class="link-dark rounded text-white">Errores</a></li>
-                  <li><a href="Descargas.aspx" class="link-dark rounded text-white">Descargas</a></li>
+                  
                   <li><a href="AerolineasPais.aspx" class="link-dark rounded text-white">Aerolíneas</a></li>
                   <li><a href="PuertasActivas.aspx" class="link-dark rounded text-white">Puertas</a></li>
                 </ul>

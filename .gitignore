@@ -1,3 +1,5 @@
 
 *.config
 VVuelos/VVuelos-FrontEnd/Web.config
+VVuelos/.vs/VVuelos/config/applicationhost.config
+VVuelos/VVuelos/Web.config

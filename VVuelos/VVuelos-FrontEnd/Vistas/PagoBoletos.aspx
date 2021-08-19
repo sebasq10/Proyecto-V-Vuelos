@@ -11,15 +11,19 @@
             <!--<form class="p-4 p-md-5 border rounded-3 bg-light">-->
             <h1 class="display-4 lh-1 mb-3" style="color: black;">Tarjeta Credito</h1>
             <div class="form-floating mb-3">
-                <asp:TextBox type="text" name="Numero de Tarjeta" runat="server" ID="txtNumT" class="form-control" placeholder="Num_Tarjeta" />
+                <asp:TextBox type="text" name="Numero de Tarjeta" runat="server" ID="txtNumT" class="form-control" placeholder="Num_Tarjeta" MaxLength="16"/>
                 <label for="floatingInput">xxxx-xxxx-xxxx-xxxx</label>
             </div>
             <div class="form-floating mb-3">
-                <asp:TextBox type="text" name="MesExp" runat="server" ID="txtMesExp" class="form-control" placeholder="MesExp" />
+                <asp:TextBox type="text" name="MesExp" runat="server" ID="txtMesExp" class="form-control" placeholder="MesExp" MaxLength="2"/>
                 <label for="floatingInput">Mes Exp</label>
             </div>
+            <div class="form-floating mb-3">
+                <asp:TextBox type="text" name="Año" runat="server" ID="txtAno" class="form-control" placeholder="Ano" MaxLength="2"/>
+                <label for="floatingInput">Año</label>
+            </div>
             <div class="form-floating mb-2">
-                <asp:TextBox type="text" name="CVV" runat="server" ID="txtCVV" class="form-control" placeholder="CVV" />
+                <asp:TextBox type="text" name="CVV" runat="server" ID="txtCVV" class="form-control" placeholder="CVV" MaxLength="3" />
                 <label for="floatingInput">CVV</label>
             </div>
             <div class="form-floating mb-2">
@@ -31,7 +35,7 @@
                 <label for="floatingInput">Tipo</label>
             </div>
             <div class="form-floating mb-3">
-                <asp:Button class="btn- btn-warning" ID="btnLogin" runat="server" Text="Tarjeta Debito/Credito" />
+                <asp:Button class="btn- btn-warning" ID="btnTarjeta" runat="server" Text="Tarjeta Debito/Credito" OnClick="btnTarjeta_Clicked" />
                 <asp:Label ID="lblError" runat="server" />
             </div>
             <hr class="my-4">
@@ -45,12 +49,12 @@
                 <label for="floatingInput">Codigo de Seguridad</label>
             </div>
             <div class="form-floating mb-2">
-                <asp:TextBox type="password" name="Contraseña" runat="server" ID="TextBox3" class="form-control" placeholder="Contrasena" />
+                <asp:TextBox type="password" name="Contraseña" runat="server" ID="txtContrasena" class="form-control" placeholder="Contrasena" />
                 <label for="floatingInput">Contraseña</label>
             </div>
             <div class="form-floating mb-3">
-                <asp:Button class="btn- btn-warning" ID="Button1" runat="server" Text="EasyPay" />
-                <asp:Label ID="Label1" runat="server" />
+                <asp:Button class="btn- btn-warning" ID="btnEasyPay" runat="server" Text="EasyPay" OnClick="btnEasyPay_Clicked" />
+                <asp:Label ID="lblError1" runat="server" />
             </div>
         </div>
     </div>
