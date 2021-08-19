@@ -33,6 +33,15 @@ namespace VVuelos_FrontEnd.Vistas
         protected global::System.Web.UI.WebControls.TextBox txtMesExp;
 
         /// <summary>
+        /// Control txtAno.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAno;
+
+        /// <summary>
         /// Control txtCVV.
         /// </summary>
         /// <remarks>
@@ -60,13 +69,13 @@ namespace VVuelos_FrontEnd.Vistas
         protected global::System.Web.UI.WebControls.TextBox txtTipo;
 
         /// <summary>
-        /// Control btnLogin.
+        /// Control btnTarjeta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.WebControls.Button btnTarjeta;
 
         /// <summary>
         /// Control lblError.
@@ -96,30 +105,30 @@ namespace VVuelos_FrontEnd.Vistas
         protected global::System.Web.UI.WebControls.TextBox txtCodSeg;
 
         /// <summary>
-        /// Control TextBox3.
+        /// Control txtContrasena.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox txtContrasena;
 
         /// <summary>
-        /// Control Button1.
+        /// Control btnEasyPay.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnEasyPay;
 
         /// <summary>
-        /// Control Label1.
+        /// Control lblError1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label lblError1;
     }
 }
