@@ -5,41 +5,14 @@
           <div class="col p-5">
             <p class="h3 row mb-4">Puertas Activas</p>
             <div class="table-responsive-lg col-md-10">
-              <table class="table">             
-                <thead class="table-primario-dark">
-                  <tr>
-                    <th scope="col">Codigo</th>
-                    <th scope="col">Numero</th>
-                    <th scope="col">Detalle</th>
-                    <th scope="col">Acciones</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Eliminar</button>
-                    </td>
-                  <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Eliminar</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td>
-                      <button type="button" class="btn btn-primary">Eliminar</button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <asp:GridView ID="tabla_Puertas" AutoGenerateColumns="false" class="table" border="0" runat="server">
+                  <headerstyle CssClass="table-primario-dark"/>
+                    <Columns>
+                        <asp:BoundField DataField="Cod_Puerta" HeaderText="Código de Puerta" />
+                        <asp:BoundField DataField="Numero" HeaderText="Número" />
+                        <asp:BoundField DataField="Detalle" HeaderText="Detalle" />
+                    </Columns>
+              </asp:GridView>
             </div>
-            <a class="btn btn-success" href="ManejoConsecutivo.aspx">Nuevo</a></li>
           </div>
 </asp:Content>

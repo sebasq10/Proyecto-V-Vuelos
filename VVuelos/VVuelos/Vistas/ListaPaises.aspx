@@ -30,7 +30,7 @@
                   <div class="form-group row mb-3">
                     <label for="numeroConsecutivo" class="col-sm-2 col-form-label">Nombre:</label>
                     <div class="col-sm-2">
-                      <asp:TextBox runat="server" type="text" class="form-control" id="NombrePais" MaxLength="5"/>
+                      <asp:TextBox runat="server" type="text" class="form-control" id="NombrePais"/>
                     </div>
                   </div>
                   <div class="form-group row mb-3">
@@ -42,7 +42,6 @@
                   <div class="form-group row mb-3">
                     <div class="col-sm-4">
                       <asp:Button ID="btnUploadImage" runat="server" Text="Subir Imagen" OnClick="btnUploadImage_Click" />
-                      <button type="button" class="btn btn-danger">Borrar</button>
                     </div>
                   </div>
                 </div>

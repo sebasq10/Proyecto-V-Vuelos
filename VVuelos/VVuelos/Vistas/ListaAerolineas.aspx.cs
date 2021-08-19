@@ -1,8 +1,12 @@
 ﻿using BLL;
 using System;
+using BLL;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -22,14 +26,33 @@ namespace VVuelos.Vistas
                 tabla_aerolineas.DataBind();
             }
         }
-
-        protected void editar_Aerolinea_Click(object sender, EventArgs e)
+        protected void btnUploadImage_Click(object sender, EventArgs e)
         {
-            string codigo_aerolinea = (sender as LinkButton).CommandArgument;
-            Aerolineas aerolineas = new Aerolineas();
-            DataSet datatest;
-            datatest = aerolineas.cargar_aerolinea_codigo(ref mensaje_error, ref numero_error, codigo_aerolinea);
-            codigoAerolinea.Text = datatest.Tables[0].Rows[0][0].ToString();
+            Aerolineas aerolinea = new Aerolineas();
+            if (FileUpload1.HasFile)
+            {
+                byte[] ImageByteArray = null;
+                ImageByteArray = ConvertImageToByteArray(FileUpload1);
+                string converted = Convert.ToBase64String(ImageByteArray, 0, ImageByteArray.Length);
+                aerolinea.insertar_aerolinea(ref mensaje_error, ref numero_error, codAerolinea.Text, nombreAerolinea.Text, converted);
+                Response.Write("<script>alert('Se subió sin problemas la imagen');</script>");
+            }
+            else { Response.Write("<script>alert('Imagen no seleccionada');</script>"); }
+        }
+
+        private byte[] ConvertImageToByteArray(FileUpload fuImage)
+        {
+            byte[] ImageByteArray;
+            try
+            {
+                MemoryStream ms = new MemoryStream(fuImage.FileBytes);
+                ImageByteArray = ms.ToArray();
+                return ImageByteArray;
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
         }
     }
 }

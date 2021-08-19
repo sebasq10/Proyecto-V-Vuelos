@@ -26,7 +26,6 @@ namespace VVuelos.Vistas
         protected void btnUploadImage_Click(object sender, EventArgs e)
         {
             Paises pais = new Paises();
-            DataSet dataSet;
             if (FileUpload1.HasFile)
             {
                 byte[] ImageByteArray = null;

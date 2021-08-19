@@ -137,25 +137,18 @@ namespace BLL
             }
             else
             {
-                sql = "insertar_aerlinea";
-
-
+                sql = "insertar_aerolinea";
 
                 ParamStruct[] parametros = new ParamStruct[3];
-
-
 
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 0, "@Cod_Aerolinea", SqlDbType.VarChar, cod_aerolinea);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 1, "@Nombre", SqlDbType.VarChar, nombre);
                 cls_DAL.agregar_datos_estructura_parametros(ref parametros, 2, "@Imagen", SqlDbType.VarChar, imagen);
-
-
-
-                ds = cls_DAL.ejecuta_dataset(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
+                cls_DAL.conectar(conexion, ref mensaje_error, ref numero_error);
+                cls_DAL.ejecuta_sqlcommand(conexion, sql, true, parametros, ref mensaje_error, ref numero_error);
+                cls_DAL.desconectar(conexion, ref mensaje_error, ref numero_error);
                 if (numero_error != 0)
                 {
-
-
 
                     mensajeError = mensaje_error;
                     numeroError = numero_error;

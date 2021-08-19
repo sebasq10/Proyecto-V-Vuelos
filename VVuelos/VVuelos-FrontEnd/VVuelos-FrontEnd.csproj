@@ -158,6 +158,7 @@
     <Content Include="Vistas\BuscarVuelos.aspx" />
     <Content Include="Vistas\ListaVuelos.aspx" />
     <Content Include="Vistas\InicioSesion.aspx" />
+    <Content Include="Vistas\PagoBoletos.aspx" />
     <Content Include="Vistas\ReservarBoletos.aspx" />
     <Content Include="Vistas\UsuarioNuevo.aspx" />
     <Content Include="Vistas\cambiarContrasena.aspx" />
@@ -212,6 +213,13 @@
     </Compile>
     <Compile Include="Vistas\InicioSesion.aspx.designer.cs">
       <DependentUpon>InicioSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\PagoBoletos.aspx.cs">
+      <DependentUpon>PagoBoletos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vistas\PagoBoletos.aspx.designer.cs">
+      <DependentUpon>PagoBoletos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vistas\ReservarBoletos.aspx.cs">
       <DependentUpon>ReservarBoletos.aspx</DependentUpon>
