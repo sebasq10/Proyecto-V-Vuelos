@@ -21,3 +21,9 @@ C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\D
 C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.dll
 C:\Users\Sebas\OneDrive\Desktop\Github\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.pdb
+C:\S\Proyecto-V-Vuelos\VVuelos\DAL\bin\Debug\DAL.dll
+C:\S\Proyecto-V-Vuelos\VVuelos\DAL\bin\Debug\DAL.pdb
+C:\S\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\S\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\S\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.dll
+C:\S\Proyecto-V-Vuelos\VVuelos\DAL\obj\Debug\DAL.pdb
